@@ -1,0 +1,231 @@
+.Visits {
+  position: relative;
+  font-family: Raleway, sans-serif;
+  &-Content {
+    width: 964px;
+    max-width: 80%;
+    margin: 0 auto;
+    background: white;
+    border-radius: 10px;
+    padding: 27px 74px 36px 74px;
+    box-sizing: border-box;
+  }
+  &-Inner {
+    padding-top: 36px;
+  }
+  &-Title {
+    font-weight: bold;
+    color: white;
+    margin-right: 20px;
+    font-size: 18px;
+    text-align: center;
+  }
+  &-Changesemester {
+    padding-top: 3rem;
+    width: 964px;
+    max-width: 80%;
+    margin: 0 auto;
+    display: flex;
+    align-items: center;
+    margin-bottom: 40px;
+    p {
+      margin: 0;
+    }
+  }
+
+  &-Count {
+    display: flex;
+    flex-flow: column wrap;
+    font-family: Roboto;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 16px;
+    line-height: 19px;
+    color: #000000;
+  }
+
+  .Count {
+    &-Have {
+      white-space: nowrap;
+      margin-top: 15px;
+      margin-bottom: 15px;
+    }
+    &-All {
+      white-space: nowrap;
+      margin-top: 15px;
+      margin-bottom: 15px;
+    }
+    &-Need {
+      margin-top: 15px;
+      margin-bottom: 15px;
+      color: #f79329;
+    }
+  }
+
+  &-Loader {
+    width: 40px;
+    height: 40px;
+    background: black;
+    border-radius: 100px;
+    margin: 0 auto;
+    animation-duration: 1s;
+    animation-timing-function: linear;
+    animation-name: rotation;
+    animation-iteration-count: infinite;
+    &_false {
+      display: none;
+    }
+    &_true {
+      display: block;
+    }
+  }
+}
+
+@keyframes rotation {
+  from {
+    -webkit-transform: rotate(0deg);
+  }
+  to {
+    -webkit-transform: rotate(360deg);
+  }
+}
+
+.Visitstable {
+  margin-top: 32px;
+  margin-bottom: 30px;
+  border-bottom: 2px solid #000000;
+  border-right: 2px solid #000000;
+  border-left: 2px solid #000000;
+  border-top: 2px solid #000000;
+  border-radius: 5px;
+  &-Title {
+    display: grid;
+    height: 44px;
+    background: #ffffff;
+    font-size: 1rem;
+    font-family: Roboto, sans-serif;
+    font-weight: bold;
+    color: #000000;
+    align-items: center;
+    border-bottom: 2px solid #000000;
+    border-radius: 5px 5px 0px 0px;
+    grid-template-columns: 25% 75%;
+  }
+  &-Content {
+    display: grid;
+    min-height: 46px;
+    grid-template-columns: 25% 75%;
+    font-size: 18px;
+  }
+
+  &-Date {
+    white-space: nowrap;
+    justify-content: center;
+    display: flex;
+    align-items: center;
+    border-bottom: 1px solid #e5e5e5;
+    padding: 12px 26px;
+  }
+  &-Section {
+    justify-content: center;
+    display: flex;
+    align-items: center;
+    border-bottom: 1px solid #e5e5e5;
+    border-right: 1px solid #e5e5e5;
+    padding: 0 26px;
+  }
+}
+
+.Title {
+  &-Date {
+    justify-content: center;
+    display: flex;
+    align-items: center;
+  }
+  &-Section {
+    justify-content: center;
+    display: flex;
+    align-items: center;
+  }
+}
+
+.Journal {
+  text-align: center;
+  &-Title {
+    color: #121058;
+    font-family: Roboto, sans-serif;
+    font-weight: bold;
+    font-size: 22px;
+    line-height: 26px;
+  }
+}
+
+.Coursechange {
+  width: 158px;
+  &:focus {
+    outline: none;
+  }
+  &-Select {
+    height: 100px;
+  }
+}
+
+@media screen and (max-width: 640px) {
+  .Visits {
+    &-Title {
+      margin-bottom: 20px;
+      margin-right: 0;
+    }
+    &-Changesemester {
+      flex-direction: column;
+    }
+  }
+  .Visitstable {
+    &-Content {
+      font-size: 0.7rem;
+    }
+    &-Title {
+      font-size: 0.5rem;
+    }
+    &-Date {
+      overflow: scroll;
+    }
+    &-Section {
+      overflow: scroll;
+    }
+  }
+
+  .Visits {
+    &-Content {
+      padding: 0 5% 36px;
+    }
+  }
+}
+
+@media screen and (max-width: 950px) {
+  .Visitstable {
+    &-Title {
+      font-size: 0.7rem;
+    }
+  }
+  .Visitstable {
+    &-Content {
+      grid-template-columns: 25% 75%;
+      font-size: 0.8rem;
+    }
+  }
+}
+
+@media screen and (max-width: 450px) {
+  .Visitstable {
+    &-Title {
+      font-size: 0.7rem;
+    }
+    &-Date {
+      padding: 0;
+    }
+    &-Section {
+      padding: 0;
+    }
+  }
+}

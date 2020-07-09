@@ -1,0 +1,158 @@
+.Regcontent {
+  height: 100vh;
+  background: #5754db;
+  overflow: hidden;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  justify-content: space-between;
+  &-Programmer {
+    pointer-events: none;
+    user-select: none;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    max-height: 62vh;
+    max-width: 100vw;
+    z-index: 1;
+  }
+}
+
+.Menu {
+  &-Icon {
+    padding: 0 30px;
+    line-height: 10px;
+    display: none;
+  }
+}
+
+.Logo {
+  &-Logo {
+    padding: 6px;
+  }
+  &-Text {
+    display: flex;
+    padding: 0 6px;
+    font-size: 16pt;
+    box-sizing: border-box;
+    align-items: flex-start;
+    justify-content: center;
+    flex-direction: column;
+    border-left: 1px solid white;
+    font-family: "Raleway" sans-serif;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 16px;
+    line-height: 19px;
+  }
+
+  &_first {
+    font-weight: bold;
+  }
+}
+
+.Line {
+  &-Wrap {
+    pointer-events: none;
+    user-select: none;
+    position: absolute;
+    min-width: 100%;
+    top: 0;
+    right: 0;
+    z-index: 0;
+  }
+}
+
+.Img {
+  &-Wrap {
+    width: 100%;
+    overflow: hidden;
+    img {
+      width: 100%;
+      height: 80vh;
+      object-fit: cover;
+      pointer-events: none;
+      user-select: none;
+    }
+  }
+}
+
+@media screen and (max-width: 640px) {
+  .Regcontent {
+    &-Programmer {
+      left: 2vw;
+    }
+  }
+
+  .Menu {
+    &-Icon {
+      display: block;
+      img {
+        pointer-events: none;
+        max-height: 40px;
+      }
+    }
+  }
+
+  .Logo {
+    &-Logo {
+      padding: 6px;
+
+      img {
+        pointer-events: none;
+        width: 120px;
+      }
+    }
+    &-Text {
+      font-size: 12pt;
+    }
+  }
+}
+
+@media screen and (max-width: 450px) {
+  .Menu {
+    &-Icon {
+      width: 80%;
+      text-align: right;
+    }
+  }
+}
+
+@media screen and (max-width: 350px) {
+  .Logo {
+    &-Logo {
+      padding: 6px;
+
+      img {
+        width: 80px;
+      }
+    }
+    &-Text {
+      font-size: 8pt;
+      line-height: 12px;
+    }
+  }
+
+  .Menu {
+    &-Icon {
+      display: block;
+      img {
+        max-height: 30px;
+      }
+    }
+  }
+}
+
+@media screen and (max-height: 500px) {
+  .Regcontent {
+    height: auto;
+    min-height: 100vh;
+  }
+
+  .Regcontent {
+    &-Navbar {
+      padding-bottom: 10px;
+    }
+  }
+}

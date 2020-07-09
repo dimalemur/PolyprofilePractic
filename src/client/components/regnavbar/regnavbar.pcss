@@ -1,0 +1,31 @@
+.Navbar {
+    pointer-events: none;
+    user-select: none;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100vw;
+    z-index: 3;
+    padding-top: 30px;
+  &-Logo {
+    position: relative;
+    left: 8%;
+    display: flex;
+  }
+}
+
+@media screen and (max-width: 640px) {
+  .Navbar {
+    pointer-events: all;
+    &-Logo {
+      left: 0;
+    }
+  }
+}
+
+@media screen and (max-width: 450px) {
+  .Navbar {
+    flex-direction: column-reverse;
+    padding-top: 10px;
+  }
+}

@@ -1,0 +1,57 @@
+.Sidebar {
+  z-index: 4;
+  position: fixed;
+  height: 100vh;
+  width: 3.5rem;
+  background: #302c2c;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  padding: 7px;
+  box-sizing: border-box;
+  button {
+    background: #302c2c;
+    border: none;
+  }
+}
+
+.Topicons {
+  display: flex;
+  flex-direction: column;
+  &-Profileicon {
+    text-align: center;
+    margin-bottom: 30px;
+    img {
+      width: 37px;
+      height: 37px;
+      pointer-events: none;
+      user-select: none;
+    }
+  }
+}
+
+.Bottomicons {
+  display: flex;
+  flex-direction: column;
+  &-Settingicon {
+    margin-bottom: 30px;
+  }
+}
+
+.Menuicon {
+  text-align: center;
+  img {
+    width: 20px;
+    height: 20px;
+    pointer-events: none;
+    user-select: none;
+  }
+}
+
+@media screen and (max-width: 640px) {
+  .Sidebar {
+    display: none;
+    right: 0;
+  }
+}
