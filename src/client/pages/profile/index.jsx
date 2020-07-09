@@ -11,6 +11,8 @@ import Profilecontent from '../../components/profileContent';
 import Myfinances from '../../components/myfinances';
 import Additionalcourses from '../../components/additional_courses';
 import Timetable from '../../components/timetable';
+import { MyMessages } from '../../components/messages';
+import { Feedback } from '../../components/feedback';
 import { Backgroundcontainer } from '../../components/backgroundcontainer';
 import { Backgrounds } from '../../components/backgrounds';
 import Settings from '../../components/settings';
@@ -175,6 +177,30 @@ const Profile = (props) => {
         render={() => (
           <Backgroundcontainer
             page={Sertificates}
+            menuVisible={props.menuVisible}
+            background={Backgrounds.Blue}
+          />
+        )}
+      />
+
+      {/* Сообщения */}
+      <Route exact
+        path='/:user/messages'
+        render={() => (
+          <Backgroundcontainer
+            page={MyMessages}
+            menuVisible={props.menuVisible}
+            background={Backgrounds.Blue}
+          />
+        )}
+      />
+
+      {/* Обратная связь */}
+      <Route exact
+        path='/:user/feedback'
+        render={() => (
+          <Backgroundcontainer
+            page={Feedback}
             menuVisible={props.menuVisible}
             background={Backgrounds.Blue}
           />

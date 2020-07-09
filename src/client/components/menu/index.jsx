@@ -61,6 +61,16 @@ const links = [
     name: 'Справки',
     url: '/certificates',
   },
+  {
+    id: 'messages',
+    name: 'Сообщения',
+    url: '/messages',
+  },
+  {
+    id: 'feedback',
+    name: 'Обратная связь',
+    url: '/feedback',
+  },
 ];
 
 const Menu = (props) => {
