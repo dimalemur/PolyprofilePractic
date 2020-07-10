@@ -21,7 +21,7 @@ export const MyMessages = (props) => (
               Поиск
             </div>
             <div className="img-search">
-              <img src={imgSearch} />
+              <img src={imgSearch} alt='' />
             </div>
           </div>
           <div className="list-contacts">

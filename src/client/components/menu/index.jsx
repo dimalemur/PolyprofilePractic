@@ -69,7 +69,20 @@ const links = [
   {
     id: 'feedback',
     name: 'Обратная связь',
-    url: '/feedback',
+    links: [
+      {
+        name: 'Центры по работе со студентами',
+        url: '/centers',
+      },
+      {
+        name: 'Анкета для оценки образовательного процесса',
+        url: '/questionnaire',
+      },
+      {
+        name: 'Форма обратной связи',
+        url: '/feedback',
+      },
+    ]
   },
 ];
 
