@@ -11,7 +11,7 @@ export const MyMessages = (props) => (
     <Regnavbar />
 
     <div class='MyMessages-Inner'>
-    <div class='MyMessages-Title Title'>Сообщения</div>
+    <div class='MyMessages-Title'>Сообщения</div>
 
     <div className='MyMessages-form'>
 

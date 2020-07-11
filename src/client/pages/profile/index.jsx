@@ -13,6 +13,7 @@ import Additionalcourses from '../../components/additional_courses';
 import Timetable from '../../components/timetable';
 import { MyMessages } from '../../components/messages';
 import { Centers } from '../../components/centers';
+import { Questionnaire } from '../../components/questionnaire';
 import { FeedbackForm } from '../../components/feedbackForm';
 import { Backgroundcontainer } from '../../components/backgroundcontainer';
 import { Backgrounds } from '../../components/backgrounds';
@@ -191,7 +192,7 @@ const Profile = (props) => {
           <Backgroundcontainer
             page={MyMessages}
             menuVisible={props.menuVisible}
-            background={Backgrounds.Blue}
+            background={Backgrounds.GreenBlue}
           />
         )}
       />
@@ -202,6 +203,18 @@ const Profile = (props) => {
         render={() => (
           <Backgroundcontainer
             page={Centers}
+            menuVisible={props.menuVisible}
+            background={Backgrounds.BlueBig}
+          />
+        )}
+      />
+
+      {/* Анкета для оценки образовательного процесса */}
+      <Route exact
+        path='/:user/questionnaire'
+        render={() => (
+          <Backgroundcontainer
+            page={Questionnaire}
             menuVisible={props.menuVisible}
             background={Backgrounds.Blue}
           />
@@ -215,7 +228,7 @@ const Profile = (props) => {
           <Backgroundcontainer
             page={FeedbackForm}
             menuVisible={props.menuVisible}
-            background={Backgrounds.Blue}
+            background={Backgrounds.BlueBig}
           />
         )}
       />

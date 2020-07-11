@@ -1,3 +1,10 @@
+@font-face {
+  font-family: 'HelveticaNeueCyr Light';
+  font-style: normal;
+  font-weight: 300;
+  src: url('../../../source/fonts/HelveticaNeueCyr/HelveticaNeueCyr-Light.otf') format('opentype');
+}
+
 .FeedbackForm {
   position: relative;
   &-Inner {
@@ -7,7 +14,7 @@
   }
   &-Title {
     font-size: 32px;
-    margin-top: 5rem;
+    margin-top: 2rem;
     color: #ffffff;
   }
   &-Content {
@@ -20,7 +27,7 @@
 
 .FbForm {
   &-Title {
-    font-family: Roboto, sans-serif;
+    font-family: HelveticaNeueCyr Medium, sans-serif;
     font-style: normal;
     font-weight: 550;
     font-size: 18px;
@@ -29,9 +36,7 @@
     padding: 2.125rem 4.375rem 0.9375rem 4.375rem;
   }
   &-Text {
-    font-family: Roboto, sans-serif;
-    font-style: normal;
-    font-weight: 400;
+    font-family: HelveticaNeueCyr Light, sans-serif;
     font-size: 14px;
     line-height: 16px;
     color: #000000;
@@ -40,7 +45,7 @@
   &-Form {
     display: flex;
     flex-direction: row;
-    padding: 1.125rem 9rem 1.875rem 9rem;
+    padding: 1.125rem 9rem 0.9375rem 9rem;
   }
   &-Buttons {
     display: flex;
@@ -68,7 +73,7 @@
 
 .Fb {
  &-Label {
-   font-family: Roboto, sans-serif;
+   font-family: HelveticaNeueCyr Medium, sans-serif;
    font-style: normal;
    font-weight: 550;
    font-size: 12px;
@@ -86,10 +91,12 @@
    border-radius: 5px;
    margin-top: 12px;
    margin-bottom: 12px;
-   padding: 0;
+   padding: 6px 10px 6px 10px;
+   font-family: HelveticaNeueCyr Light, sans-serif;
+   font-size: 11px;
  }
  &-LabYourMes {
-   font-family: Roboto, sans-serif;
+   font-family: HelveticaNeueCyr Medium, sans-serif;
    font-style: normal;
    font-weight: 550;
    font-size: 12px;
@@ -100,10 +107,17 @@
  &-TextYourMes {
     width: 245px;
     height: 150px;
+    padding: 6px 10px 6px 10px;
     border: 0.7px solid #898686;
     box-sizing: border-box;
     border-radius: 5px;
+    font-family: HelveticaNeueCyr Light, sans-serif;
+    font-size: 11px;
  }
+}
+
+.LabMarg {
+  margin-top: 0.8125rem;
 }
 
 .Btn {

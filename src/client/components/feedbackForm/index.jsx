@@ -22,7 +22,7 @@ export const FeedbackForm = (props) => (
             <p className='Fb-Label'>ФИО</p>
             <p className='Fb-Label'>E-mail</p>
             <p className='Fb-Label'>Телефон</p>
-            <p className='Fb-Label'>Тематика обращения</p>
+            <p className='Fb-Label LabMarg'>Тематика обращения</p>
           </div>
           <div className='Group-Fields'>
             <input className='Fb-Field' type='text' />
