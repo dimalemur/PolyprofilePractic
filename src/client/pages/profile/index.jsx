@@ -14,7 +14,7 @@ import Timetable from '../../components/timetable';
 import { MyMessages } from '../../components/messages';
 import { Centers } from '../../components/centers';
 import { Questionnaire } from '../../components/questionnaire';
-import { FeedbackForm } from '../../components/feedbackForm';
+import { FeedbackGen } from '../../components/feedbackGen';
 import { Backgroundcontainer } from '../../components/backgroundcontainer';
 import { Backgrounds } from '../../components/backgrounds';
 import Settings from '../../components/settings';
@@ -226,7 +226,7 @@ const Profile = (props) => {
         path='/:user/feedback'
         render={() => (
           <Backgroundcontainer
-            page={FeedbackForm}
+            page={FeedbackGen}
             menuVisible={props.menuVisible}
             background={Backgrounds.BlueBig}
           />

@@ -3,12 +3,6 @@ import './feedbacknotice.pcss';
 import Regnavbar from '../regnavbar';
 
 export const FeedbackNotice = (props) => (
-  <div className='FeedbackNotice'>
-    <Regnavbar />
-    <div className='FeedbackNotice-Inner'>
-      <div className='FeedbackNotice-Title Title'>
-        Форма обратной связи
-      </div>
       <div className='FeedbackNotice-Content'>
         <div className='Notice-Title'>
           <span>Прежде, чем написать сообщение, убедитесь в том, что указанные ниже случаи НЕ относятся к вашей проблеме:</span>
@@ -22,9 +16,7 @@ export const FeedbackNotice = (props) => (
           <p>5. <span className='Text-Attention'>Неправильные суммы в разделе</span> «Сведения об оплатах», отсутствует договор: обратитесь в договорной отдел.</p>
         </div>
         <div className='Notice-Сonfirm'>
-          <span>Да, я в курсе этого. Мой вопрос касается другой темы</span>
+          <button>Да, я в курсе этого. Мой вопрос касается другой темы</button>
         </div>
       </div>
-    </div>
-  </div>
 );
