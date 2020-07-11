@@ -1,13 +1,5 @@
 import config from './config';
-import authRoute from './routes/auth';
-import regRoute from './routes/reg';
-import userRoute from './routes/user';
-import infoRoute from './routes/info';
-import pageRoute from './routes/page';
-import generalInfoRoute from './routes/generalInfo';
 import errorHandler from './middlewares/errorHandler';
-import checkToken from './middlewares/checkToken';
-import { checkUserByName } from './controllers/user';
 
 const express = require('express');
 const path = require('path');
@@ -28,26 +20,10 @@ app
     secret: config.secret,
   }))
   .get('/ping', (_req, res) => res.json({ status: 200 })) // проверка пинга
-  // api роутинг
-  .use('/api', authRoute) // авторизация
-  .use('/api', checkToken, regRoute) // регистрация
-  .use('/api', checkToken, userRoute) // получаем юзезра по id (без пароля)
-  .use('/api', checkToken, pageRoute) // информация связанная с пользователем
-  .use('/api', checkToken, generalInfoRoute) // информация не связанная с пользователем
-  .use('/api', checkToken, infoRoute) // добавление и получение записей
-  .get('/checkAuth', checkToken, (req, res) => { // получаем токен, возвращаем объект с id пользователя
-    res.json(req.token);
-  })
-  // Роутинг страниц
   .use('/', staticWay)
-  .use('/admin', staticWay)
-  .use('/admin/:user', staticWay)
-  .use('/admin/:user/:page', staticWay)
+  .use('/:user', staticWay)
+  .use('/:user/:page', staticWay)
   .use('/login/authhelp/', staticWay)
-  .use('/:user', checkUserByName, staticWay)
-  .use('/:user/:page', checkUserByName, staticWay)
-
-  // обработка необработанных ошибок
   .use(errorHandler);
 
 app.listen(config.port, (err) => {
