@@ -11,6 +11,9 @@ import Profilecontent from '../../components/profileContent';
 import Myfinances from '../../components/myfinances';
 import Additionalcourses from '../../components/additional_courses';
 import Timetable from '../../components/timetable';
+import { MyMessages } from '../../components/messages';
+import { Centers } from '../../components/centers';
+import { FeedbackForm } from '../../components/feedbackForm';
 import { Backgroundcontainer } from '../../components/backgroundcontainer';
 import { Backgrounds } from '../../components/backgrounds';
 import Settings from '../../components/settings';
@@ -175,6 +178,42 @@ const Profile = (props) => {
         render={() => (
           <Backgroundcontainer
             page={Sertificates}
+            menuVisible={props.menuVisible}
+            background={Backgrounds.Blue}
+          />
+        )}
+      />
+
+      {/* Сообщения */}
+      <Route exact
+        path='/:user/messages'
+        render={() => (
+          <Backgroundcontainer
+            page={MyMessages}
+            menuVisible={props.menuVisible}
+            background={Backgrounds.Blue}
+          />
+        )}
+      />
+
+      {/* Центры по работе со студентами */}
+      <Route exact
+        path='/:user/centers'
+        render={() => (
+          <Backgroundcontainer
+            page={Centers}
+            menuVisible={props.menuVisible}
+            background={Backgrounds.Blue}
+          />
+        )}
+      />
+
+      {/* Форма обратной связи */}
+      <Route exact
+        path='/:user/feedback'
+        render={() => (
+          <Backgroundcontainer
+            page={FeedbackForm}
             menuVisible={props.menuVisible}
             background={Backgrounds.Blue}
           />

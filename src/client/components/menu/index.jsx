@@ -61,6 +61,29 @@ const links = [
     name: 'Справки',
     url: '/certificates',
   },
+  {
+    id: 'messages',
+    name: 'Сообщения',
+    url: '/messages',
+  },
+  {
+    id: 'feedback',
+    name: 'Обратная связь',
+    links: [
+      {
+        name: 'Центры по работе со студентами',
+        url: '/centers',
+      },
+      {
+        name: 'Анкета для оценки образовательного процесса',
+        url: '/questionnaire',
+      },
+      {
+        name: 'Форма обратной связи',
+        url: '/feedback',
+      },
+    ]
+  },
 ];
 
 const Menu = (props) => {
