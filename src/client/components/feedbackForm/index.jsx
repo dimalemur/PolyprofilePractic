@@ -1,15 +1,7 @@
 import React from 'react';
 import './feedbackform.pcss';
-import Regnavbar from '../regnavbar';
 
 export const FeedbackForm = (props) => (
-  <div className='FeedbackForm'>
-    <Regnavbar />
-    <div className='FeedbackForm-Inner'>
-      <div className='FeedbackForm-Title Title'>
-        Форма обратной связи
-      </div>
-
       <div className='FeedbackForm-Content'>
         <div className='FbForm-Title'>
           Для рассмотрения вашей проблемы, пожалуйста, заполните данные в форме, расположенной ниже
@@ -40,6 +32,4 @@ export const FeedbackForm = (props) => (
           <button className='Btn-Back'>Вернуться на предыдущую страницу</button>
         </div>
       </div>
-    </div>
-  </div>
 );

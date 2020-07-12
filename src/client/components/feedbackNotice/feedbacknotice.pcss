@@ -23,7 +23,7 @@
   &-Text {
     padding: 0.9375rem 4.375rem 0.9375rem 4.375rem;
     p {
-      font-family: HelveticaNeueCyr Medium, sans-serif;
+      font-family: HelveticaNeueCyr Light, sans-serif;
       font-style: normal;
       font-weight: 300;
       font-size: 14px;
@@ -47,6 +47,20 @@
   }
 }
 
+.Btn-Conf:active, .Btn-Conf:focus, .Btn-Conf:hover {
+  outline: none !important;
+  cursor: pointer;
+}
+
 .Text-Attention {
   font-weight: bold;
+}
+
+@media screen and (max-width: 950px) {
+.Notice {
+    &-Title, &-Text, &-Confirm {
+      padding-left: 25px;
+      padding-right: 25px;
+    }
+  }
 }

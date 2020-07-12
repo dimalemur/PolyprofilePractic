@@ -37,26 +37,38 @@
 .search {
   display: flex;
   flex-direction: row;
+  justify-content: flex-end;
   width: 340px;
   height: 38px;
   margin: 17px 25px 15px 25px;
-  background: rgba(42, 102, 182, 0.67);
-  border-radius: 8px;
 }
 
 .field-search {
-  padding: 7px 234px 8px 19px;
+  flex: 1;
+  padding: 7px 20px 8px 19px;
   font-family: Raleway, sans-serif;
   font-style: normal;
   font-weight: 500;
   font-size: 20px;
   line-height: 23px;
-
   color: rgba(255, 255, 255, 0.85);
+  background: rgba(42, 102, 182, 0.67);
+  border-radius: 8px 0 0 8px;
+  border: none;
+}
+
+.field-search::placeholder {color: rgba(255, 255, 255, 0.85);}
+
+.field-search:active, .field-search:focus {
+  outline: 0;
+  outline-offset: 0;
 }
 
 .img-search {
-  padding: 9px 10px 10px 0;
+  padding: 9px 8px 10px 8px;
+  background: rgba(42, 102, 182, 0.67);
+  border-radius: 0 8px 8px 0;
+  border: none;
 }
 
 .contact {

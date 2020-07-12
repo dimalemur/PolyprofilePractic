@@ -2,6 +2,7 @@ import React from 'react';
 import './feedbackgen.pcss';
 import Regnavbar from '../regnavbar';
 import { FeedbackNotice } from '../feedbackNotice';
+import { FeedbackForm } from '../feedbackForm';
 
 export const FeedbackGen = (props) => (
   <div className='FeedbackGen'>

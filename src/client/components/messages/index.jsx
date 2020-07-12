@@ -10,16 +10,14 @@ export const MyMessages = (props) => (
   <div className='MyMessages'>
     <Regnavbar />
 
-    <div class='MyMessages-Inner'>
-    <div class='MyMessages-Title'>Сообщения</div>
+    <div className='MyMessages-Inner'>
+    <div className='MyMessages-Title'>Сообщения</div>
 
     <div className='MyMessages-form'>
 
         <div className="contacts">
           <div className="search">
-            <div className="field-search">
-              Поиск
-            </div>
+            <input type='text' placeholder='Поиск' className="field-search" />
             <div className="img-search">
               <img src={imgSearch} alt='' />
             </div>

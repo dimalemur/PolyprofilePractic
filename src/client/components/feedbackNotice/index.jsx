@@ -1,6 +1,5 @@
 import React from 'react';
 import './feedbacknotice.pcss';
-import Regnavbar from '../regnavbar';
 
 export const FeedbackNotice = (props) => (
       <div className='FeedbackNotice-Content'>
@@ -16,7 +15,7 @@ export const FeedbackNotice = (props) => (
           <p>5. <span className='Text-Attention'>Неправильные суммы в разделе</span> «Сведения об оплатах», отсутствует договор: обратитесь в договорной отдел.</p>
         </div>
         <div className='Notice-Сonfirm'>
-          <button>Да, я в курсе этого. Мой вопрос касается другой темы</button>
+          <button className='Btn-Conf'>Да, я в курсе этого. Мой вопрос касается другой темы</button>
         </div>
       </div>
 );

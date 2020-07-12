@@ -45,12 +45,17 @@
   &-Form {
     display: flex;
     flex-direction: row;
-    padding: 1.125rem 9rem 0.9375rem 9rem;
+    justify-content: center;
+    align-items: center;
+    padding-left: 4.375rem;
+    padding-right: 4.375rem;
   }
   &-Buttons {
     display: flex;
     flex-direction: column;
-    padding: 1.875rem 12.8125rem 2rem 12.8125rem;
+    align-items: center;
+    padding-bottom: 2rem;
+    margin-top: 2.8125rem;
   }
 }
 
@@ -59,15 +64,21 @@
     padding-right: 1rem;
     display: flex;
     flex-direction: column;
+    justify-content: center;
+    align-items: right;
   }
   &-Fields {
     display: flex;
     flex-direction: column;
+    justify-content: center;
+    align-items: center;
   }
   &-YourMes {
     padding-left: 0.9375rem;
     display: flex;
     flex-direction: column;
+    justify-content: center;
+    align-items: left;
   }
 }
 
@@ -80,11 +91,13 @@
    line-height: 12px;
    text-align: right;
    color: #333333;
-   margin-top: 19px;
-   margin-bottom: 18px;
+   margin-top: 12px;
+   margin-bottom: 12px;
+   padding-top: 6px;
+   padding-bottom: 6px;
  }
  &-Field {
-   width: 12.5rem;
+   width: 100%;
    height: 1.5625rem;
    border: 0.7px solid #898686;
    box-sizing: border-box;
@@ -101,6 +114,7 @@
    font-weight: 550;
    font-size: 12px;
    line-height: 12px;
+   margin-top: 6px;
    margin-bottom: 6px;
    color: #333333;
  }
@@ -114,10 +128,6 @@
     font-family: HelveticaNeueCyr Light, sans-serif;
     font-size: 11px;
  }
-}
-
-.LabMarg {
-  margin-top: 0.8125rem;
 }
 
 .Btn {
@@ -148,6 +158,101 @@
   }
 }
 
+.Btn-Send:active, .Btn-Send:focus, .Btn-Send:hover {
+  outline: none !important;
+  cursor: pointer;
+}
+
+.Btn-Back:active, .Btn-Back:focus, .Btn-Back:hover {
+  outline: none !important;
+  cursor: pointer;
+}
+
 .Text-Attention {
   font-weight: bold;
+}
+
+@media screen and (min-width: 771px) and (max-width: 850px) {
+  .FbForm {
+    &-Title {
+      padding: 2.125rem 1.875rem 0.9375rem 1.875rem;
+    }
+    &-Text {
+      padding: 0.9375rem 1.875rem 0.9375rem 1.875rem;
+    }
+    &-Form {
+      padding-left: 1.875rem;
+      padding-right: 1.875rem;
+    }
+    &-Buttons {
+      padding-bottom: 2rem;
+      margin-top: 2.8125rem;
+    }
+  }
+}
+
+@media screen and (max-width: 770px) {
+  .FbForm {
+    &-Title {
+      padding: 2.125rem 1.875rem 0.9375rem 1.875rem;
+    }
+    &-Text {
+      padding: 0.9375rem 1.875rem 0.9375rem 1.875rem;
+    }
+    &-Form {
+      display: grid;
+      grid-template-columns: 20% 80%;
+      grid-template-rows: 50% 50%;
+      padding-left: 1.875rem;
+      padding-right: 1.875rem;
+    }
+    &-Buttons {
+      padding-bottom: 2rem;
+      margin-top: 2.8125rem;
+    }
+  }
+
+  .Group {
+    display: grid;
+    &-Labels {
+      grid-column: 1;
+      grid-row: 1;
+    }
+    &-Fields {
+      grid-column: 2;
+      grid-row: 1;
+      align-items: start;
+    }
+    &-YourMes {
+      grid-column: span 2;
+      grid-row: 2;
+    }
+  }
+
+  .Fb {
+    &-TextYourMes {
+       width: 100%;
+    }
+  }
+
+  .Btn {
+    &-Send {
+      width: 80%;
+    }
+  }
+}
+
+@media screen and (max-width: 500px) {
+  .FbForm {
+    &-Form {
+      grid-template-columns: 35% 65%;
+      grid-template-rows: 50% 50%;
+    }
+  }
+
+  .Fb {
+    &-Label {
+       font-size: 10px;
+    }
+  }
 }
