@@ -11,7 +11,7 @@ export const FeedbackGen = (props) => (
       <div className='FeedbackGen-Title Title'>
         Форма обратной связи
       </div>
-      <FeedbackNotice />
+      <FeedbackNotice  />
     </div>
   </div>
 );
