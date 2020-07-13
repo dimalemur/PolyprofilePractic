@@ -143,7 +143,7 @@ const Profile = (props) => {
           <Backgroundcontainer
             page={WidthGetJobNews}
             menuVisible={props.menuVisible}
-            background={Backgrounds.CurveBLue}
+            background={Backgrounds.Blue}
           />
         )}
       />
@@ -167,7 +167,7 @@ const Profile = (props) => {
           <Backgroundcontainer
             page={Myfinances}
             menuVisible={props.menuVisible}
-            background={Backgrounds.CurveVectorBLue}
+            background={Backgrounds.Blue}
           />
         )}
       />

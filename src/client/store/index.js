@@ -6,6 +6,7 @@ import { profilePageReducer } from './reducers/profilePageReducer';
 import { gradesPageReducer } from './reducers/gradesPageReducer';
 import { sportPageReducer } from './reducers/sportPageReducer';
 import { timetablePageReducer } from './reducers/timetablePageReducer';
+import { myFinancesPageReducer } from './reducers/myfinancesPageReducer';
 
 const reducers = combineReducers({
   mainPage: mainPageReducer,
@@ -13,6 +14,7 @@ const reducers = combineReducers({
   gradesPage: gradesPageReducer,
   sportVisitsPage: sportPageReducer,
   timetablePage: timetablePageReducer,
+  myfinancesPage: myFinancesPageReducer,
 });
 
 export const store = createStore(reducers, composeWithDevTools(applyMiddleware(thunk)));

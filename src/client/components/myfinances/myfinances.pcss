@@ -1,7 +1,8 @@
 .Myfinances {
   position: relative;
   &-Content {
-    max-width: 880px;
+    width: 880px;
+    max-width: 90%;
     margin: 0 auto;
     padding: 45px 0;
   }
@@ -13,9 +14,9 @@
 .Changebar {
   display: flex;
   &-Item {
-    background: #121058;
+    background: #ffc164;
     border-radius: 5px 5px 0px 0px;
-    padding: 8px 52px;
+    padding: 8px 5%;
     display: flex;
     justify-content: center;
     text-align: center;
@@ -24,9 +25,10 @@
     font-style: normal;
     font-weight: bold;
     font-size: 16px;
+    margin-left: 6px;
     cursor: pointer;
     line-height: 19px;
-    color: rgba(255, 255, 255, 0.8);
+    color: white;
     &_active {
       background: white;
       color: black;
@@ -37,11 +39,19 @@
   }
 }
 
+.Item_isfirst {
+  &_true {
+    margin: 0;
+  }
+}
+
 @media screen and (max-width: 640px) {
   .Changebar {
     flex-direction: column;
     &-Item {
       height: 2em;
+      margin: 0;
+      border-radius: 0;
     }
   }
 

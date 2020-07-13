@@ -7,8 +7,9 @@ import './myfinances.pcss';
 const Changebaritem = (props) => {
   const { id } = props;
   const { name } = props;
+  const { firstItem } = props;
   return (
-    <div className={`Changebar-Item Changebar-Item_${(id === props.changededMode) ? 'active' : ''}`}
+    <div className={`Changebar-Item Changebar-Item_${(id === props.changededMode) ? 'active' : ''} Item_isfirst_${firstItem}`}
       onClick={(event) => { props.setChangededMode(id); }}
     >
       {name}
@@ -16,7 +17,11 @@ const Changebaritem = (props) => {
   );
 };
 
-const list = ['Общежитие', 'Обучение', 'Бланки для заполнения'];
+const list = [
+  { name: 'Общежитие', firstItem: true },
+  { name: 'Обучение', firstItem: false },
+  { name: 'Бланки для заполнения', firstItem: false },
+];
 
 const Myfinances = (props) => {
   const { Regnavbar } = props;
@@ -34,7 +39,8 @@ const Myfinances = (props) => {
             {list.map((el, id) => (
               <Changebaritem key={id}
                 id={id}
-                name={el}
+                name={el.name}
+                firstItem={el.firstItem}
                 setChangededMode={setChangededMode}
                 changededMode={changededMode}
               />

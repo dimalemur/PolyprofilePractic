@@ -395,3 +395,97 @@ export const jobNews = [
     "html": "<div id='myModal_12133' class='reveal-modal'><font>5 июня 2020 г.</font><h4>ВТБ открывает набор на оплачиваемую стажировку для IT-специалистов</h4><hr size='1'><br><p><em>Вы сможете выбрать один из семи треков развития, включая аналитику, разработку, DevOps и сопровождение IT-инфраструктуры. Также на&nbsp;<strong>ВТБ IT&nbsp;Юниор</strong>&nbsp;вы займетесь серьезными проектами, связанными с внедрением системы управления данными, будете сопровождать enterprise-системы и поучаствуете в создании физической инфраструктуры. И вот что еще ждет вас на стажировке:</em></p><p><em><br>&mdash; Возможность поработать с передовыми технологиями, от обработки данных на платформе Spark до разработки с использованием Docker и Kubernetes.<br>&mdash; Поддержка опытного ментора и обсуждение персональных векторов развития.<br>&mdash; Профильные мастер-классы от главных IT-экспертов банка, курс по развитию профессиональных навыков, вебинары и тренинги.<br>&mdash; Занятость от 30 часов в неделю и возможность совмещать стажировку с учебой.<br><br>Подайте заявку на оплачиваемую стажировку и начните свою уверенную карьеру в IT:&nbsp;</em><a href='https://clck.ru/NeRnE' target='_blank'>https://clck.ru/NeRnE</a></p><br><a class='close-reveal-modal'>x</a></div>"
   },
 ];
+
+export const payments = [
+  {
+    year: 2018,
+    payment: [
+      {
+        mounth: "августа",
+        day: 28,
+        paid: 600,
+        balance: 28200,
+        isactive: false,
+      },
+      {
+        mounth: "октября",
+        day: 12,
+        paid: 600,
+        balance: 27600,
+        isactive: false,
+      },
+      {
+        mounth: "октября",
+        day: 13,
+        paid: 600,
+        balance: 27500,
+        isactive: false,
+      },
+      {
+        mounth: "ноября",
+        day: 26,
+        paid: 1200,
+        balance: 26400,
+        isactive: false,
+      },
+    ],
+  },
+  {
+    year: 2019,
+    payment: [
+      {
+        mounth: "февраля",
+        day: 27,
+        paid: 1200,
+        balance: 25200,
+        isactive: false,
+      },
+      {
+        mounth: "апреля",
+        day: 12,
+        paid: 1200,
+        balance: 24000,
+        isactive: false,
+      },
+      {
+        mounth: "июля",
+        day: 26,
+        paid: 1200,
+        balance: 22800,
+        isactive: false,
+      },
+      {
+        mounth: "сентября",
+        day: 26,
+        paid: 1800,
+        balance: 21000,
+      },
+      {
+        mounth: "ноября",
+        day: 26,
+        paid: 1200,
+        balance: 19800,
+        isactive: false,
+      },
+    ],
+  },
+  {
+    year: 2020,
+    payment: [
+      {
+        mounth: "февраля",
+        day: 28,
+        paid: 1200,
+        balance: 18000,
+        isactive: false,
+      },
+      {
+        mounth: "июля",
+        day: 12,
+        paid: 1800,
+        balance: 16800,
+        isactive: false,
+      },
+    ],
+  },
+];

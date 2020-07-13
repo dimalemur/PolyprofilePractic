@@ -29,8 +29,6 @@ export const profilePageReducer = (state = initialState, action) => {
 
     case LOG_OUT:
       newState = { ...state };
-      console.log(123);
-      
       newState = initialState;
       window.localStorage.setItem('polyUser', null);
       return newState;
