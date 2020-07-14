@@ -5,6 +5,14 @@
 export const mainPageUser = {
   _id: '5ecb902139d6512be83cfd2a',
   login: 'jora',
+  isTeacher: false,
+  __v: 0,
+};
+
+export const mainPageTeacher = {
+  _id: '5ecb902139d6512be83cfd2a',
+  login: 'ivanov',
+  isTeacher: true,
   __v: 0,
 };
 
@@ -21,20 +29,72 @@ const orders = [
   },
 ];
 
+const workInfo = [
+  {
+    _id: '5ee8f1aaba20103dccebc346',
+    name: 'Инфокогнитивные технологии',
+    additional: '(преподаватель 0.25 ст.) - Основное место работы',
+  },
+  {
+    _id: '5ef1c3cab67412450c5778b6',
+    name: 'Центр разработки и поддержки информационных систем',
+    additional: '(начальник центра 0.50 ст.) - Внутреннее совместительство',
+  },
+];
+
 const userId = '5ecb902139d6512be83cfd2a';
+
+export const polyProfileTeacherData = {
+  name: 'Иванов Иван Иванович',
+  email: 'ivanov@mail.ru',
+  tel: '+7-939-489-56-65',
+  _id: '5ecb904139d6512be83cfd2b',
+  workInfo,
+  userId,
+};
 
 export const polyProfileUserData = {
   name: 'Подов Гордей Семенович',
-  faq: 'ФИТ',
-  course: '3',
-  group: '181-361',
-  specialty: '09.03.03 Прикладная информатика',
-  specialization: 'КИС',
-  period: 4,
-  form: 'Очная',
-  financing: 'Бюджет',
-  level: 'Бакалавр',
-  year: '2018/2019',
+  faq: {
+    key: 'Факультет',
+    val: 'ФИТ'
+  },
+  course: {
+    key: 'Курс',
+    val: '3'
+  },
+  group: {
+    key: 'Группа',
+    val: '181-361'
+  },
+  specialty: {
+    key: 'Специальность',
+    val: '09.03.03 Прикладная информатика'
+  },
+  specialization: {
+    key: 'Специализация',
+    val: 'КИС'
+  },
+  period: {
+    key: 'Срок обучения',
+    val: 4
+  },
+  form: {
+    key: 'Форма обучения',
+    val: 'Очная'
+  },
+  financing: {
+    key: 'Вид финансирования',
+    val: 'Бюджет'
+  },
+  level: {
+    key: 'Уровень образования',
+    val: 'Бакалавр'
+  },
+  year: {
+    key: 'Год набора',
+    val: '2018/2019'
+  },
   email: 'jora@gmail.com',
   tel: '+79772714525',
   _id: '5ecb904139d6512be83cfd2b',

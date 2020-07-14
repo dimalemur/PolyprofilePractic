@@ -10,7 +10,7 @@ import avatarIcon from '../../../source/images/icons/ava.svg';
 import settingsIcon from '../../../source/images/icons/settings.svg';
 import menuIcon from '../../../source/images/icons/menu.svg';
 
-const links = [
+const linksForUser = [
   {
     id: 'Study',
     name: 'Учёба',
@@ -82,9 +82,75 @@ const links = [
         name: 'Форма обратной связи',
         url: '/feedback',
       },
-    ]
+    ],
   },
 ];
+
+const linksForTeacher = [
+  {
+    id: 'messages',
+    name: 'Расписание',
+    url: '/timetable',
+  },
+  {
+    id: 'Career',
+    name: 'Карьера',
+    links: [
+      {
+        name: 'Дополнительные образовательные курсы',
+        url: '/additional_courses',
+      },
+    ],
+  },
+  {
+    id: 'messages',
+    name: 'Сообщения',
+    url: '/messages',
+  },
+  {
+    id: 'feedback',
+    name: 'Обратная связь',
+    links: [
+      {
+        name: 'Форма обратной связи',
+        url: '/feedback',
+      },
+    ],
+  },
+];
+
+const Menulist = (props) => {
+  const links = (props.isTeacher) ? linksForTeacher : linksForUser;
+  return (
+    <>
+      {
+        links.map((element, i) => (
+          ('url' in element)
+            ? (
+              <li className='List-Item' key={i} >
+                <NavLink to={`/${props.user}${element.url}`}>{element.name}</NavLink>
+              </li>
+            ) : (
+              <li className='List-Item' key={i}>
+                <input type='checkbox' name='vkl' id={element.id} />
+                <label htmlFor={element.id}> {element.name} </label>
+
+                <ul className='Innerlist'>
+                  {
+                    element.links.map((el, j) => (
+                      <li className='Innerlist-Initem' key={j}>
+                        <NavLink to={`/${props.user}${el.url}`}>{el.name}</NavLink>
+                      </li>
+                    ))
+                  }
+                </ul>
+              </li>
+            )
+        ))
+      }
+    </>
+  );
+};
 
 const Menu = (props) => {
   const logOut = (event) => {
@@ -110,31 +176,7 @@ const Menu = (props) => {
 
       <div className='Userlist Menu-Userlist'>
         <ul className='Userlist List'>
-          {
-            links.map((element, i) => (
-              ('url' in element)
-                ? (
-                  <li className='List-Item' key={i} >
-                    <NavLink to={`/${props.user}${element.url}`}>{element.name}</NavLink>
-                  </li>
-                ) : (
-                  <li className='List-Item' key={i}>
-                    <input type='checkbox' name='vkl' id={element.id} />
-                    <label htmlFor={element.id}> {element.name} </label>
-
-                    <ul className='Innerlist'>
-                      {
-                        element.links.map((el, j) => (
-                          <li className='Innerlist-Initem' key={j}>
-                            <NavLink to={`/${props.user}${el.url}`}>{el.name}</NavLink>
-                          </li>
-                        ))
-                      }
-                    </ul>
-                  </li>
-                )
-            ))
-          }
+          <Menulist isTeacher={props.isTeacher} user={props.user} />
         </ul>
       </div>
 
@@ -158,6 +200,7 @@ const Menu = (props) => {
 export default connect(
   (state) => ({
     state,
+    isTeacher: state.mainPage.user.isTeacher,
     menuVisible: state.mainPage.pagesState.menuVisible,
   }),
   (dispatch) => ({

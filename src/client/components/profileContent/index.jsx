@@ -35,49 +35,53 @@ const Profilecontent = (props) => {
             <span className='Ava-Text'>{props.userData.name}</span>
           </div>
 
-          <div className='Infoblock Personinfo Info-Personinfo'>
-            <p className='Infoblock-Title Personinfo-Title' >
-              Данные обучающегося
-            </p>
+          {
+            (props.userData.workInfo === undefined)
+              ? (<div className='Infoblock Personinfo Info-Personinfo'>
+                <p className='Infoblock-Title Personinfo-Title' >
+                  Данные обучающегося
+              </p>
 
-            <div className='Personinfo-Content'>
+                <div className='Personinfo-Content'>
 
-              <div className='Personinfo-Name'>
-                <p className='Infoline' > <b>Факультет : </b> </p>
-                <p className='Infoline' > <b>Курс : </b> </p>
-                <p className='Infoline' > <b>Группа : </b> </p>
-                <p className='Infoline' > <b>Специальность : </b> </p>
-                <p className='Infoline' > <b>Специализация : </b> </p>
-                <p className='Infoline' > <b>Срок обучения : </b> </p>
-                <p className='Infoline' > <b>Форма обучения : </b> </p>
-                <p className='Infoline' > <b>Вид финансирования : </b> </p>
-                <p className='Infoline' > <b>Уровень образования : </b> </p>
-                <p className='Infoline' > <b>Год набора : </b> </p>
-              </div>
-              <div className='Personinfo-Value'>
-                <p className='Infoline' > {props.userData.faq} </p>
-                <p className='Infoline' > {props.userData.course} </p>
-                <p className='Infoline' > {props.userData.group} </p>
-                <p className='Infoline' > {props.userData.specialty} </p>
-                <p className='Infoline' > {props.userData.specialization} </p>
-                <p className='Infoline' > {props.userData.period} </p>
-                <p className='Infoline' > {props.userData.form} </p>
-                <p className='Infoline' > {props.userData.financing} </p>
-                <p className='Infoline' > {props.userData.level}</p>
-                <p className='Infoline' > {props.userData.year} </p>
-              </div>
-            </div>
-          </div>
+                  <div className='Personinfo-Name'>
+                    {
+                      Object.values(props.userData).map((el) => (
+                        (el !== null && !Array.isArray(el) && typeof el === 'object')
+                          ? (<p key={el.key} className='Infoline' > <b>{el.key} </b> </p>)
+                          : (<></>)
+                      ))
+                    }
+                  </div>
+                  <div className='Personinfo-Value'>
+                    {
+                      Object.values(props.userData).map((el) => (
+                        (el !== null && !Array.isArray(el) && typeof el === 'object')
+                          ? (<p key={el.values} className='Infoline' > {el.val} </p>)
+                          : (<></>)
+                      ))
+                    }
+                  </div>
+
+                </div>
+              </div>)
+              : <></>
+          }
 
           <div className='Infoblock Info-Contactinfo '>
 
             <p className='Infoblock-Title' >
-              Контактные данные
+              {
+                (props.userData.workInfo === undefined)
+                  ? 'Контактные данные'
+                  : 'Данные о сотруднике'
+              }
+
             </p>
 
             <div className='Personinfo-Content'>
               <div className='Personinfo-Name'>
-                <p className='Infoline' > <b>Адрес электронной почты : </b> </p>
+                <p className='Infoline' > <b>Электронная почта : </b> </p>
                 <p className='Infoline' > <b>Номер телефона : </b> </p>
               </div>
 
@@ -92,17 +96,29 @@ const Profilecontent = (props) => {
           <div className='Infoblock Info-Contactinfo '>
 
             <p className='Infoblock-Title' >
-              Приказы
-            </p>
+              {
+                (props.userData.workInfo === undefined)
+                  ? 'Приказы'
+                  : 'Сведения о трудоустройстве'
+              }
 
+            </p>
             <div className='Infoblock-Orders'>
               {
-
-                props.userData.orders.map((item, i) => (
-                  <p className='Infoline' key={i} >
-                    <a href={`http://www.${item.url}`} > {`${i + 1}. ${item.name}`} </a>
-                  </p>
-                ))
+                (props.userData.orders !== undefined)
+                  ? (
+                    props.userData.orders.map((item, i) => (
+                      <p className='Infoline' key={i} >
+                        <a href={`http://www.${item.url}`} > {`${i + 1}. ${item.name}`} </a>
+                      </p>
+                    ))
+                  ) : (
+                    props.userData.workInfo.map((item, i) => (
+                      <p className='Infoline' key={i} >
+                        <b>{item.name}</b> {item.additional}
+                      </p>
+                    ))
+                  )
               }
             </div>
 
