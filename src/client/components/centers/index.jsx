@@ -16,13 +16,13 @@ export const Centers = (props) => (
           Контактные данные главного офиса для обращения по общим вопросам
         </div>
         <div className='info-block'>
-          <div className='item'>
+          <div className='item-text'>
             <span className='item-title'>Адрес: </span>г. Москва, ул. Большая Семёновская, д. 38, ауд. А-412
           </div>
-          <div className='item'>
+          <div className='item-text'>
             <span className='item-title'>Телефон: </span>(495) 223-05-23 доб. 1116
           </div>
-          <div className='item'>
+          <div className='item-text'>
             <span className='item-title'>E-mail: </span>y.e.gorina@mospolytech.ru, e.u.lugina@mospolytech.ru
           </div>
         </div>
@@ -41,13 +41,13 @@ export const Centers = (props) => (
           </select>
         </div>
         <div className='info-block'>
-          <div className='item'>
+          <div className='item-text'>
             <span className='item-title'>Адрес: </span>107023, г. Москва, ул. Большая Семеновская, 38, ауд В-101, В102
           </div>
-          <div className='item'>
+          <div className='item-text'>
             <span className='item-title'>Телефон: </span>(495) 223-05-23, доб. 1175, 1375, 1475 либо (495) 223-05-39
           </div>
-          <div className='item'>
+          <div className='item-text'>
             <span className='item-title'>E-mail: </span>crs-informatika@mospolytech.ru
           </div>
         </div>

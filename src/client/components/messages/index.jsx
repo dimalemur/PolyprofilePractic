@@ -5,24 +5,23 @@ import Regnavbar from '../regnavbar';
 import avaMes from '../../../source/images/icons/ava_mes.svg';
 import addFiles from '../../../source/images/icons/add-files.svg';
 import imgSearch from '../../../source/images/icons/img-search.svg';
+import imgNewChat from '../../../source/images/icons/newChat.svg';
 
 export const MyMessages = (props) => (
   <div className='MyMessages'>
     <Regnavbar />
 
-    <div class='MyMessages-Inner'>
-    <div class='MyMessages-Title Title'>Сообщения</div>
+    <div className='MyMessages-Inner'>
+    <div className='MyMessages-Title'>Сообщения</div>
 
     <div className='MyMessages-form'>
 
         <div className="contacts">
           <div className="search">
-            <div className="field-search">
-              Поиск
-            </div>
-            <div className="img-search">
+            <input type='text' placeholder='Поиск' className="field-search" />
+            <button className="img-search">
               <img src={imgSearch} alt='' />
-            </div>
+            </button>
           </div>
           <div className="list-contacts">
             <div className="contact">
@@ -31,10 +30,10 @@ export const MyMessages = (props) => (
               </div>
               <div className="info">
                 <div className="name-cont">
-                  Иванов Иван Иванович
+                  <p>Иванов Иван Иванович</p>
                 </div>
                 <div className="last-mes">
-                  Здравствуйте, пара переносится...
+                  <p>Здравствуйте, пара переносится на 16:00, аудитория В-410</p>
                 </div>
               </div>
             </div>
@@ -44,14 +43,17 @@ export const MyMessages = (props) => (
               </div>
               <div className="info">
                 <div className="name-cont">
-                  Мирченко Анна Григорьевна
+                  <p>Мирченко Анна Григорьевна</p>
                 </div>
                 <div className="last-mes">
-                  [Вы]: Привет; )
+                  <p>[Вы]: Привет; )</p>
                 </div>
               </div>
             </div>
           </div>
+          <button className='Btn-CreateDialog'>
+            <img src={imgNewChat} alt='' />
+          </button>
         </div>
 
         <div className="dialog">
@@ -78,12 +80,10 @@ export const MyMessages = (props) => (
             </div>
           </div>
           <div className="write">
-            <div className="field-write">
-              Введите сообщение
-            </div>
-            <div className="add-files">
+            <input type='text' className="field-write" placeholder='Введите сообщение' />
+            <button className="add-files">
               <img src={addFiles} />
-            </div>
+            </button>
           </div>
         </div>
       </div>
