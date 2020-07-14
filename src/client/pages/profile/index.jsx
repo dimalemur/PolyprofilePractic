@@ -39,6 +39,97 @@ const Profile = (props) => {
   if (token === 'null' || token == null) {
     return <Redirect to='/' />;
   }
+  // Если учитель
+  if (props.isTeacher) {
+    return (
+      <div className={`Profile Profile_fixpos_${fixPosition} `}>
+        {/* Сайдбар */}
+        <Sidebar user={user}
+          activateMenu={props.setMenuVisible}
+        />
+
+        {/* Боковое выпадающее меню */}
+        <Menu state={props.state}
+          activateMenu={props.setMenuVisible}
+          user={user}
+        />
+        {/* Профиль */}
+        <Route exact
+          path='/:user'
+          render={() => (
+            <Backgroundcontainer
+              page={Profilecontent}
+              menuVisible={props.menuVisible}
+              background={Backgrounds.Blue}
+              user={user}
+            />
+          )}
+        />
+        {/* Настройки */}
+        <Route exact
+          path='/:user/settings'
+          render={() => (
+            <Backgroundcontainer
+              page={Settings}
+              menuVisible={props.menuVisible}
+              background={Backgrounds.Blue}
+              fixPosition={fixPosition}
+              setFixPosition={setFixPosition}
+            />
+          )}
+        />
+
+        {/* Образовательные программы */}
+        <Route exact
+          path='/:user/faculties'
+          render={() => (
+            <Backgroundcontainer
+              page={Faculties}
+              menuVisible={props.menuVisible}
+              background={Backgrounds.GreenBlue}
+            />
+          )}
+        />
+
+        {/* Дополнительные курсы */}
+        <Route exact
+          path='/:user/additional_courses'
+          render={() => (
+            <Backgroundcontainer page={Additionalcourses}
+              menuVisible={props.menuVisible}
+              background={Backgrounds.YellowLightYellow}
+              bgDefault='Darkblue'
+            />
+          )}
+        />
+
+        {/* Сообщения */}
+        <Route exact
+          path='/:user/messages'
+          render={() => (
+            <Backgroundcontainer
+              page={MyMessages}
+              menuVisible={props.menuVisible}
+              background={Backgrounds.GreenBlue}
+            />
+          )}
+        />
+
+        {/* Форма обратной связи */}
+        <Route exact
+          path='/:user/feedback'
+          render={() => (
+            <Backgroundcontainer
+              page={FeedbackGen}
+              menuVisible={props.menuVisible}
+              background={Backgrounds.BlueBig}
+            />
+          )}
+        />
+      </div>
+    );
+  }
+  // Если ученик
   return (
     <div className={`Profile Profile_fixpos_${fixPosition} `}>
       {/* Сайдбар */}
@@ -240,6 +331,7 @@ const mapStateToProps = (state) => ({
   state,
   menuVisible: state.mainPage.pagesState.menuVisible,
   login: state.mainPage.user.login,
+  isTeacher: state.mainPage.user.isTeacher,
 });
 
 const mapDispatchToProps = (dispatch) => ({
