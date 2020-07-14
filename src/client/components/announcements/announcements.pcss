@@ -1,0 +1,217 @@
+@font-face {
+  font-family: 'HelveticaNeueCyr Light-Italic';
+  font-style: normal;
+  font-weight: normal;
+  src: url('../../../source/fonts/HelveticaNeueCyr/HelveticaNeueCyr-LightItalic.otf') format('opentype');
+}
+
+.Announcements {
+  position: relative;
+  &-Inner {
+    width: 900px;
+    max-width: 80%;
+    margin: 0 auto;
+  }
+  &-Title {
+    font-size: 40px;
+    line-height: 47px;
+    margin-top: 2rem;
+    color: #ffffff;
+  }
+  &-Content {
+    background: white;
+    border-radius: 5px;
+    padding: 0;
+    box-sizing: border-box;
+  }
+}
+
+.ControlPanel {
+  padding: 31px 92px 11px 92px;
+  display: flex;
+  flex-direction: row;
+  &-Filter {
+
+  }
+  &-Search {
+    margin-left: auto;
+    display: flex;
+    flex-direction: row;
+  }
+}
+
+.SelectDate {
+  height: 25px;
+  border: 1px solid #C4C4C4;
+  box-sizing: border-box;
+  border-radius: 3px;
+}
+
+.SelectDate:active, .SelectDate:focus, .SelectDate:hover {
+  outline: none !important;
+  cursor: pointer;
+}
+
+.SearchText {
+  width: 350px;
+  height: 25px;
+  padding: 7px 20px 6px 20px;
+  font-family: HelveticaNeueCyr Light-Italic, sans-serif;
+  font-style: italic;
+  font-weight: 400;
+  font-size: 12px;
+  line-height: 12px;
+  border: 0.7px solid #C4C4C4;
+  box-sizing: border-box;
+  border-radius: 4px 0 0 4px;
+}
+
+.SearchText::placeholder {
+  font-family: HelveticaNeueCyr Light-Italic, sans-serif;
+  font-style: italic;
+  font-weight: 400;
+  font-size: 12px;
+  color: #898686;
+}
+
+.SearchText:active, .SearchText:focus {
+  outline: 0;
+  outline-offset: 0;
+}
+
+.ButtonSearch {
+  width: 35px;
+  height: 25px;
+  background: #666262;
+  border-radius: 0px 4px 4px 0px;
+  border: none;
+}
+
+.ButtonSearch:active, .ButtonSearch:focus, .ButtonSearch:hover {
+  outline: none !important;
+  cursor: pointer;
+}
+
+.ArticlesList {
+  padding: 0 92px 25px 92px;
+  display: flex;
+  flex-direction: column;
+}
+
+.Article {
+  border: 1px solid #898686;
+  box-sizing: border-box;
+  border-radius: 8px;
+  padding: 26px 45px 10px 45px;
+  margin-top: 15px;
+  &-Header {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+  }
+  &-Text {
+    padding: 30px 0 6px 0;
+    font-family: HelveticaNeueCyr Medium;
+    font-style: normal;
+    font-weight: 550;
+    font-size: 16px;
+    line-height: 16px;
+    color: #000000;
+  }
+  &-More {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+  }
+}
+
+.Header-Title {
+  font-family: HelveticaNeueCyr Medium, sans-serif;
+  font-style: normal;
+  font-weight: 550;
+  font-size: 24px;
+  line-height: 24px;
+  color: #EE3327;
+  width: 75%;
+}
+
+.Header-Date {
+  margin-left: auto;
+  font-family: HelveticaNeueCyr Meduim, sans-serif;
+  font-style: normal;
+  font-weight: 550;
+  font-size: 16px;
+  line-height: 16px;
+  color: #898686;
+}
+
+.BtnMore {
+  border: none;
+  background: #ffffff;
+}
+
+.BtnMore:active, .BtnMore:focus, .BtnMore:hover {
+  outline: none !important;
+  cursor: pointer;
+}
+
+@media screen and (max-width: 900px) {
+  .ArticlesList, .ControlPanel {
+    padding-left: 46px;
+    padding-right: 46px;
+  }
+}
+
+@media screen and (max-width: 750px) {
+  .SearchText {
+    width: 100%;
+  }
+  .Header-Title{
+    font-size: 20px;
+  }
+  .Header-Date{
+    font-size: 12px;
+  }
+  .Article-Text{
+    font-size: 12px;
+  }
+}
+
+@media screen and (max-width: 599px) {
+  .Article {
+    padding-top: 10px;
+    padding-left: 20px;
+    padding-right: 20px;
+  }
+}
+
+@media screen and (max-width: 520px) {
+  .Article-Header {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+  .Header-Date {
+    margin-left: 0;
+    margin-top: 5px;
+  }
+  .Header-Title{
+    font-size: 16px;
+  }
+  .ArticlesList, .ControlPanel {
+    padding-left: 26px;
+    padding-right: 26px;
+  }
+  .ControlPanel {
+    flex-direction: column;
+  }
+  .ControlPanel-Search {
+    margin-left: 0;
+  }
+  .SearchText {
+    flex: 1;
+  }
+  .SelectDate {
+    margin-bottom: 5px;
+    width: 100%;
+  }
+}

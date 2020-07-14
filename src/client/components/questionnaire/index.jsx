@@ -2,8 +2,6 @@ import React from 'react';
 import './questionnaire.pcss';
 import Regnavbar from '../regnavbar';
 
-/* позже заменить на ссылку настоящей анкеты */
-
 export const Questionnaire = (props) => (
   <div className='Questionnaire'>
     <Regnavbar />
