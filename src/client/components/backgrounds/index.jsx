@@ -39,7 +39,6 @@ const CurveBLue = () => (
 const CurveOrange = () => (
   <div className='Backgroundcontainer-Wrap Wrap-Blue'>
     <img className='Backgroundcontainer-Greenmask' src={orangeMask} />
-    <img className='Backgroundcontainer-Bluemask' src={blueMask} />
   </div>
 );
 

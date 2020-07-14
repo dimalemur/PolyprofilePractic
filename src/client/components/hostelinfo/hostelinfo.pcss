@@ -5,11 +5,33 @@
     font-weight: normal;
     font-size: 20px;
     line-height: 20px;
-    text-align: center;
+    margin-top: 55px;
     margin-bottom: 28px;
   }
   &-Payment {
     display: inline-block;
+  }
+  &-Qr {
+    width: 700px;
+    margin: 0 auto;
+    margin-top: 20px;
+    max-width: 100%;
+    img {
+      height: 100%;
+    }
+    &_false {
+      display: none;
+    }
+  }
+
+  &-Help {
+    font-family: HelveticaNeueCyr, sans-serif;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 20px;
+    line-height: 20px;
+    color: #2c2a90;
+    cursor: pointer;
   }
   &-Text {
     font-family: Raleway, sans-serif;
@@ -103,8 +125,7 @@
     margin-bottom: 23px;
   }
   &-Content {
-    width: 536px;
-    margin: 0 auto;
+    margin-left: 18px;
   }
 }
 
@@ -121,5 +142,168 @@
   font-weight: bold;
   &_red {
     color: red;
+  }
+}
+
+.Pymenttable {
+  overflow-x: scroll;
+  &::-webkit-scrollbar {
+    width: 12px;
+    background-color: #f5f0f0;
+    height: 5px;
+  }
+  &::-webkit-scrollbar-thumb {
+    background-color: #479f79;
+    border-radius: 10px;
+  }
+  &-Payments {
+    border: 1px solid #6fcaa2;
+    border-top: none;
+    max-height: 421px;
+    overflow-y: scroll;
+    &::-webkit-scrollbar {
+      width: 12px;
+      background-color: #f5f0f0;
+      width: 5px;
+    }
+    &::-webkit-scrollbar-thumb {
+      background-color: #479f79;
+      border-radius: 10px;
+    }
+  }
+  &-Content {
+    width: 700px;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: 7fr 1fr;
+  }
+  &-Table {
+    max-width: 628px;
+  }
+  &-Title {
+    display: flex;
+    height: 32px;
+    justify-content: space-around;
+    align-items: center;
+    border: 1px solid #6fcaa2;
+    font-family: HelveticaNeueCyr, sans-serif;
+    font-style: normal;
+    font-weight: 550;
+    font-size: 14px;
+    line-height: 14px;
+    margin-top: 30px;
+  }
+  &-Scrollbar {
+    background: #6fcaa2;
+    margin-top: 62px;
+    overflow-y: scroll;
+    &::-webkit-scrollbar {
+      width: 12px;
+      background-color: #f5f0f0;
+      width: 5px;
+    }
+    &::-webkit-scrollbar-thumb {
+      background-color: #479f79;
+      border-radius: 10px;
+    }
+  }
+}
+
+.Scrollbar {
+  text-align: center;
+  font-family: HelveticaNeueCyr, sans-serif;
+  font-style: normal;
+  font-weight: bold;
+  color: #ffffff;
+  &-Year {
+    font-size: 13px;
+    line-height: 13px;
+    margin: 12px 0;
+  }
+  &-Mounth {
+    font-size: 11px;
+    line-height: 11px;
+    height: 15px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    &_active {
+      color: #666262;
+      background: #c0e9d7;
+    }
+  }
+}
+
+.Payments {
+  &-Block {
+    padding-top: 11px;
+  }
+}
+
+.Block {
+  &-String {
+    font-family: HelveticaNeueCyr, sans-serif;
+    font-size: 13px;
+    line-height: 13px;
+    display: flex;
+    justify-content: space-around;
+    height: 20px;
+    cursor: pointer;
+    &_true {
+      background: #c0e9d7;
+    }
+  }
+  &-Content {
+    border-top: 1px dashed black;
+    padding: 20px 0;
+  }
+  &-Title {
+    margin-left: 13%;
+    position: relative;
+    top: 7px;
+    background: white;
+    display: inline-block;
+    font-family: HelveticaNeueCyr, sans-serif;
+    font-style: normal;
+    font-weight: 550;
+    font-size: 14px;
+    line-height: 14px;
+    color: #121058;
+  }
+}
+
+.String {
+  display: flex;
+  justify-content: space-around;
+  cursor: context-menu;
+  &-Item {
+    width: 100%;
+    text-align: center;
+  }
+}
+
+.Item {
+  &-Day {
+    font-style: normal;
+    font-weight: normal;
+  }
+  &-Pay {
+    font-style: normal;
+    font-weight: 550;
+  }
+  &-Balance {
+    color: #666262;
+  }
+}
+
+@media screen and (max-width: 640px) {
+  .Hostelinfo {
+    &-Help {
+      text-align: center;
+    }
+    &-Qr {
+      text-align: center;
+    }
   }
 }
