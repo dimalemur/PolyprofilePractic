@@ -1,5 +1,12 @@
 @import url('https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
 
+@font-face {
+  font-family: 'HelveticaNeueCyr Medium';
+  font-style: normal;
+  font-weight: normal;
+  src: url('../../../source/fonts/HelveticaNeueCyr/HelveticaNeueCyr-Medium.otf') format('opentype');
+}
+
 .MyMessages {
   position: relative;
   &-Inner {
@@ -8,9 +15,14 @@
     margin: 0 auto;
   }
   &-Title {
+    font-family: Raleway, sans-serif;
+    font-style: normal;
+    font-weight: bold;
+    line-height: 47px;
     font-size: 32px;
-    margin-top: 5rem;
+    margin-top: 2rem;
     color: #ffffff;
+    margin-bottom: 15px;
   }
 }
 
@@ -19,36 +31,54 @@
   border-radius: 5px;
   padding: 0;
   box-sizing: border-box;
-  display: flex;
+  display: grid;
+  grid-template-columns: 47.911% 52.089%;
 }
 
 .search {
   display: flex;
   flex-direction: row;
-  width: 340px;
+  justify-content: center;
+  width: 87.18%;
   height: 38px;
   margin: 17px 25px 15px 25px;
-  background: rgba(42, 102, 182, 0.67);
-  border-radius: 8px;
 }
 
 .field-search {
-  padding: 7px 234px 8px 19px;
+  flex: 1;
+  padding: 7px 20px 8px 19px;
   font-family: Raleway, sans-serif;
   font-style: normal;
   font-weight: 500;
   font-size: 20px;
   line-height: 23px;
-
   color: rgba(255, 255, 255, 0.85);
+  background: rgba(42, 102, 182, 0.67);
+  border-radius: 8px 0 0 8px;
+  border: none;
+}
+
+.field-search::placeholder {color: rgba(255, 255, 255, 0.85);}
+
+.field-search:active, .field-search:focus {
+  outline: 0;
+  outline-offset: 0;
 }
 
 .img-search {
-  padding: 9px 10px 10px 0;
+  padding: 9px 8px 10px 8px;
+  background: rgba(42, 102, 182, 0.67);
+  border-radius: 0 8px 8px 0;
+  border: none;
+}
+
+.img-search:active, .img-search:focus, .img-search:hover {
+  outline: none !important;
+  cursor: pointer;
 }
 
 .contact {
-  width: 340px;
+  width: 87.18%;
   height: 65px;
   margin-left: 25px;
   margin-bottom: 7px;
@@ -58,6 +88,8 @@
   flex-direction: row;
 }
 
+.contact:hover {background: rgba(114, 166, 235, 0.59);}
+
 .name-cont {
   margin-bottom: 6px;
   font-family: Raleway, sans-serif;
@@ -65,23 +97,40 @@
   font-weight: 600;
   font-size: 15px;
   line-height: 18px;
-
+  width: 90%;
+  p {
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    overflow: hidden;
+    margin: 0;
+  }
   color: #000000;
 }
 
 .last-mes {
-  font-family: Raleway, sans-serif;
-  font-style: normal;
+  font-family: HelveticaNeueCyr Medium, sans-serif;
   font-weight: 550;
   font-size: 12px;
   line-height: 14px;
-
   color: #666262;
+  width: 90%;
+  p {
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    overflow: hidden;
+    margin: 0;
+  }
+}
+
+.contacts {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
 }
 
 .dialog {
   border: 0.5px solid rgba(114, 166, 235, 0.24);
-  width: 424px;
+  width: 100%;
 }
 
 .header-dialog {
@@ -100,7 +149,8 @@
   display: flex;
   flex-direction: column;
   justify-content: flex-start;
-  margin: 13px auto 15px 33px;
+  margin: 13px auto 15px 17px;
+  width: 75.88%;
 }
 
 .name {
@@ -125,7 +175,7 @@
 
 .mess {
   height: 434px;
-  max-height: 80%;
+  max-height: 73%;
   background: rgba(114, 166, 235, 0.24);
 }
 
@@ -135,23 +185,37 @@
 }
 
 .field-write {
-  margin: 13px auto 12px 27px;
+  margin: 13px 27px 12px 27px;
   font-family: Raleway, sans-serif;
   font-style: normal;
   font-weight: 500;
   font-size: 16px;
   line-height: 19px;
-  color: #C4C4C4;
+  flex: 1;
+  border: none;
 }
+
+.field-write:active, .field-write:focus {
+  outline: 0;
+  outline-offset: 0;
+}
+
+.field-write::placeholder {color: #C4C4C4;}
 
 .add-files {
   margin: 11px 19px 11px auto;
+  border: none;
+  background: #ffffff;
+}
+
+.add-files:active, .add-files:focus, .add-files:hover {
+  outline: none !important;
+  cursor: pointer;
 }
 
 .date {
   padding: 13px 0 13px 0;
-  font-family: Raleway, sans-serif;
-  font-style: normal;
+  font-family: HelveticaNeueCyr Medium, sans-serif;
   font-weight: 550;
   font-size: 14px;
   line-height: 14px;
@@ -161,16 +225,19 @@
 }
 
 .mes1 {
-  margin: 0 20px 5px 195px;
-  padding: 5px 8px 1px 15px;
+  width: 400px;
+  max-width: 50%;
+  margin: 0 20px 5px auto;
   background: rgba(42, 102, 182, 0.67);
   border-radius: 4px;
-
+  padding: 5px 8px 1px 15px;
   color: rgba(255, 255, 255, 0.85);
 }
 
 .mes2 {
-  margin: 0 195px 5px 20px;
+  width: 400px;
+  max-width: 50%;
+  margin: 0 auto 5px 20px;
   padding: 5px 8px 1px 15px;
   background: #FFFFFF;
   border-radius: 4px;
@@ -179,16 +246,14 @@
 }
 
 .text-mes {
-  font-family: Raleway, sans-serif;
-  font-style: normal;
+  font-family: HelveticaNeueCyr Medium, sans-serif;
   font-weight: 550;
   font-size: 11px;
   line-height: 14px;
 }
 
 .time-mes {
-  font-family: Raleway, sans-serif;
-  font-style: normal;
+  font-family: HelveticaNeueCyr Medium, sans-serif;
   font-weight: 550;
   font-size: 8px;
   line-height: 14px;
@@ -201,4 +266,67 @@
 
 .tm2 {
   color: #898686;
+}
+
+.Btn-CreateDialog {
+  margin: auto 31px 26px auto;
+  width: 50px;
+  height: 50px;
+  border: none;
+  padding: 0;
+  background: #ffffff;
+}
+
+.Btn-CreateDialog:active, .Btn-CreateDialog:focus, .Btn-CreateDialog:hover {
+  outline: none !important;
+  cursor: pointer;
+}
+
+@media screen and (max-width: 1000px) {
+  .name-cont {
+    font-size: 13px;
+  }
+}
+
+@media screen and (max-width: 900px) {
+  .MyMessages-form {
+    display: grid;
+    grid-template-columns: 100%;
+    grid-template-rows: 50% 50%;
+  }
+  .contacts {
+    grid-column: 1;
+    grid-row: 1;
+  }
+  .dialog {
+    grid-column: 1;
+    grid-row: 2;
+  }
+  .search, .contact {
+    width: 92%;
+  }
+  .header-dialog {
+    border-radius: 0;
+  }
+}
+
+@media screen and (max-width: 590px) {
+  .search, .contact, .field-search, .field-write {
+    width: 87.18%;
+  }
+  .search, .contact {
+    margin-left: 20px;
+  }
+  .name-cont {
+    font-size: 10px;
+  }
+  .last-mes {
+    font-size: 9px;
+  }
+  .name {
+    font-size: 14px;
+  }
+  .post {
+    font-size: 12px;
+  }
 }
