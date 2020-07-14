@@ -5,6 +5,14 @@
 export const mainPageUser = {
   _id: '5ecb902139d6512be83cfd2a',
   login: 'jora',
+  isTeacher: false,
+  __v: 0,
+};
+
+export const mainPageTeacher = {
+  _id: '5ecb902139d6512be83cfd2a',
+  login: 'jora',
+  isTeacher: false,
   __v: 0,
 };
 
