@@ -118,6 +118,30 @@
     line-height: 16px;
     color: #000000;
   }
+  &-MoreText {
+   &_true {
+    display: block;
+    p {
+      font-family: HelveticaNeueCyr Light;
+      font-style: normal;
+      font-weight: 300;
+      font-size: 14px;
+      line-height: 16px;
+      color: #000000;
+      a {
+        font-weight: 700;
+        color: #121058;
+      }
+      a:hover {
+        text-decoration: underline;
+        text-decoration-color: #121058;
+      }
+    }
+   }
+   &_false {
+    display: none;
+   }
+  }
   &-More {
     display: flex;
     flex-direction: row;
@@ -153,6 +177,10 @@
 .BtnMore:active, .BtnMore:focus, .BtnMore:hover {
   outline: none !important;
   cursor: pointer;
+}
+
+.imgMore_true {
+  transform: rotate(-180deg);
 }
 
 @media screen and (max-width: 900px) {
