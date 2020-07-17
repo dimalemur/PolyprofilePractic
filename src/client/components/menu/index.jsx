@@ -117,6 +117,11 @@ const linksForTeacher = [
     url: '/messages',
   },
   {
+    id: 'blanks',
+    name: 'Документы',
+    url: '/blanks',
+  },
+  {
     id: 'feedback',
     name: 'Обратная связь',
     url: '/feedback',

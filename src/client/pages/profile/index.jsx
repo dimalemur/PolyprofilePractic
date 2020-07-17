@@ -16,6 +16,7 @@ import { Announcements } from '../../components/announcements';
 import { Centers } from '../../components/centers';
 import { Questionnaire } from '../../components/questionnaire';
 import { FeedbackGen } from '../../components/feedbackGen';
+import { Blanks } from '../../components/blanks';
 import { Backgroundcontainer } from '../../components/backgroundcontainer';
 import { Backgrounds } from '../../components/backgrounds';
 import Settings from '../../components/settings';
@@ -138,6 +139,18 @@ const Profile = (props) => {
               page={MyMessages}
               menuVisible={props.menuVisible}
               background={Backgrounds.GreenBlue}
+            />
+          )}
+        />
+
+        {/* Бланки документов */}
+        <Route exact
+          path='/:user/blanks'
+          render={() => (
+            <Backgroundcontainer
+              page={Blanks}
+              menuVisible={props.menuVisible}
+              background={Backgrounds.BlueBig}
             />
           )}
         />
