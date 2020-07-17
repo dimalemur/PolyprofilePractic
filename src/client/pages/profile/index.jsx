@@ -25,6 +25,7 @@ import { asyncGetUserData } from '../../store/middleware/asyncGetUser';
 import { setMenuVisible, logOutPage } from '../../store/reducers/mainPageReducer';
 import { logOutProfile } from '../../store/reducers/profilePageReducer';
 import { logOutGrades } from '../../store/reducers/gradesPageReducer';
+import { Timetableteach } from '../../components/timetableteacher';
 
 const Profile = (props) => {
   useEffect(() => {
@@ -65,6 +66,20 @@ const Profile = (props) => {
             />
           )}
         />
+
+        {/* Профиль */}
+        <Route exact
+          path='/:user/timetable'
+          render={() => (
+            <Backgroundcontainer
+              page={Timetableteach}
+              menuVisible={props.menuVisible}
+              background={Backgrounds.Blue}
+              user={user}
+            />
+          )}
+        />
+
         {/* Настройки */}
         <Route exact
           path='/:user/settings'
@@ -75,18 +90,6 @@ const Profile = (props) => {
               background={Backgrounds.Blue}
               fixPosition={fixPosition}
               setFixPosition={setFixPosition}
-            />
-          )}
-        />
-
-        {/* Образовательные программы */}
-        <Route exact
-          path='/:user/faculties'
-          render={() => (
-            <Backgroundcontainer
-              page={Faculties}
-              menuVisible={props.menuVisible}
-              background={Backgrounds.GreenBlue}
             />
           )}
         />
