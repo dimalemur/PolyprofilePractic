@@ -100,6 +100,10 @@ const linksForTeacher = [
         name: 'Дополнительные образовательные курсы',
         url: '/additional_courses',
       },
+      {
+        name: 'Анонсы научных мероприятий',
+        url: '/announcements',
+      },
     ],
   },
   {
