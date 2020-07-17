@@ -88,23 +88,28 @@ const linksForUser = [
 
 const linksForTeacher = [
   {
-    id: 'messages',
-    name: 'Расписание',
-    url: '/timetable',
+    id: 'Study',
+    name: 'ВУЗ',
+    links: [
+      {
+        name: 'Расписание',
+        url: '/timetable',
+      },
+      {
+        name: 'Образовательные программы',
+        url: '/faculties',
+      }
+    ],
   },
   {
     id: 'Career',
-    name: 'Карьера',
-    links: [
-      {
-        name: 'Дополнительные образовательные курсы',
-        url: '/additional_courses',
-      },
-      {
-        name: 'Анонсы научных мероприятий',
-        url: '/announcements',
-      },
-    ],
+    name: 'Мероприятия',
+    url: '/announcements',
+  },
+  {
+    id: 'myFinances',
+    name: 'Мои финансы',
+    url: '/myfinances',
   },
   {
     id: 'messages',
@@ -114,12 +119,7 @@ const linksForTeacher = [
   {
     id: 'feedback',
     name: 'Обратная связь',
-    links: [
-      {
-        name: 'Форма обратной связи',
-        url: '/feedback',
-      },
-    ],
+    url: '/feedback',
   },
 ];
 

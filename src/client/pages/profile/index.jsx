@@ -62,20 +62,20 @@ const Profile = (props) => {
             <Backgroundcontainer
               page={Profilecontent}
               menuVisible={props.menuVisible}
-              background={Backgrounds.Blue}
+              background={Backgrounds.GreenBlue}
               user={user}
             />
           )}
         />
 
-        {/* Профиль */}
+        {/* Расписание преподавателя */}
         <Route exact
           path='/:user/timetable'
           render={() => (
             <Backgroundcontainer
               page={Timetableteach}
               menuVisible={props.menuVisible}
-              background={Backgrounds.Blue}
+              background={Backgrounds.GreenBlue}
               user={user}
             />
           )}
@@ -95,14 +95,14 @@ const Profile = (props) => {
           )}
         />
 
-        {/* Дополнительные курсы */}
+        {/* Образовательные программы */}
         <Route exact
-          path='/:user/additional_courses'
+          path='/:user/faculties'
           render={() => (
-            <Backgroundcontainer page={Additionalcourses}
+            <Backgroundcontainer
+              page={Faculties}
               menuVisible={props.menuVisible}
-              background={Backgrounds.YellowLightYellow}
-              bgDefault='Darkblue'
+              background={Backgrounds.GreenBlue}
             />
           )}
         />
@@ -114,6 +114,18 @@ const Profile = (props) => {
             <Backgroundcontainer page={Announcements}
               menuVisible={props.menuVisible}
               background={Backgrounds.BlueBig}
+            />
+          )}
+        />
+
+        {/* Мои финансы */}
+        < Route exact
+          path='/:user/myfinances'
+          render={() => (
+            <Backgroundcontainer
+              page={Myfinances}
+              menuVisible={props.menuVisible}
+              background={Backgrounds.Blue}
             />
           )}
         />
@@ -164,7 +176,7 @@ const Profile = (props) => {
           <Backgroundcontainer
             page={Profilecontent}
             menuVisible={props.menuVisible}
-            background={Backgrounds.Blue}
+            background={Backgrounds.GreenBlue}
             user={user}
           />
         )}
