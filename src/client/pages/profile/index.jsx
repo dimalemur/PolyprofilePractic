@@ -12,6 +12,7 @@ import Myfinances from '../../components/myfinances';
 import Additionalcourses from '../../components/additional_courses';
 import Timetable from '../../components/timetable';
 import { MyMessages } from '../../components/messages';
+import { Announcements } from '../../components/announcements';
 import { Centers } from '../../components/centers';
 import { Questionnaire } from '../../components/questionnaire';
 import { FeedbackGen } from '../../components/feedbackGen';
@@ -102,6 +103,17 @@ const Profile = (props) => {
               menuVisible={props.menuVisible}
               background={Backgrounds.YellowLightYellow}
               bgDefault='Darkblue'
+            />
+          )}
+        />
+
+        {/* Анонсы научных мероприятий */}
+        <Route exact
+          path='/:user/announcements'
+          render={() => (
+            <Backgroundcontainer page={Announcements}
+              menuVisible={props.menuVisible}
+              background={Backgrounds.BlueBig}
             />
           )}
         />
