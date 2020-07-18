@@ -22,6 +22,7 @@ import { Backgrounds } from '../../components/backgrounds';
 import Settings from '../../components/settings';
 import { Interships } from '../../components/internships';
 import { Sertificates } from '../../components/sertificates';
+import { DigitalServices } from '../../components/digitalservices';
 import { WidthGetJobNews } from '../../highOrderComponents/asyncGetJobNews';
 import { asyncGetUserData } from '../../store/middleware/asyncGetUser';
 import { setMenuVisible, logOutPage } from '../../store/reducers/mainPageReducer';
@@ -151,6 +152,18 @@ const Profile = (props) => {
               page={Blanks}
               menuVisible={props.menuVisible}
               background={Backgrounds.BlueBig}
+            />
+          )}
+        />
+
+        {/* Цифровые сервисы */}
+        <Route exact
+          path='/:user/digitalservices'
+          render={() => (
+            <Backgroundcontainer
+              page={DigitalServices}
+              menuVisible={props.menuVisible}
+              background={Backgrounds.Blue}
             />
           )}
         />

@@ -122,6 +122,11 @@ const linksForTeacher = [
     url: '/blanks',
   },
   {
+    id: 'digitalservices',
+    name: 'Cервисы',
+    url: '/digitalservices',
+  },
+  {
     id: 'feedback',
     name: 'Обратная связь',
     url: '/feedback',
