@@ -191,16 +191,16 @@ const Menu = (props) => {
 
       <button className='Signout Menu-Signout List-Item' onClick={logOut}>
         Выход
-    </button>
+      </button>
 
       <div className='Settingicons Menu-Settingicons'>
         <NavLink to={`/${props.user}/settings`} className='Menuicon Settingicons-Setting' >
           <img src={settingsIcon} alt='Настройки' />
         </NavLink>
 
-        <NavLink to='#' className='Menuicon Settingicons-Desktop' >
+        <a href='https://new.mospolytech.ru/' target='_blank' className='Menuicon Settingicons-Desktop' >
           <img src={computerIcon} alt='Компьютер' />
-        </NavLink>
+        </a>
       </div>
     </div>
   );
