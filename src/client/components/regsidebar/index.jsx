@@ -12,9 +12,9 @@ export const Regsidebar = (props) => (
       </NavLink>
     </div>
     <div className='Icon Regsidebar-Icon Icon-Bottom'>
-      <NavLink to='#'>
+      <a href='https://new.mospolytech.ru/' target="_blank">
         <img className='Icon-Img' src={computerIcon} alt='Профиль' />
-      </NavLink>
+      </a>
     </div>
   </div>
 );
