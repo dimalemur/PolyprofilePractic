@@ -5,6 +5,7 @@ import computerIcon from '../../../source/images/icons/computer.svg';
 import avatarIcon from '../../../source/images/icons/ava.svg';
 import settingsIcon from '../../../source/images/icons/settings.svg';
 import menuIcon from '../../../source/images/icons/menu.svg';
+import logOut from '../../../source/images/icons/logOut.svg';
 
 export const Sidebar = (props) => (
   <div className={'Sidebar'} >
@@ -19,14 +20,17 @@ export const Sidebar = (props) => (
     </div>
 
     <div className='Bottomicons Sidebar-Bottomicons'>
+      <button className='SignoutButton' onClick={logOut}>
+        <img src={logOut} alt='Выход' />
+      </button>
+
       <NavLink to={`/${props.user}/settings`} className='Menuicon Bottomicons-Settingicon ' >
         <img src={settingsIcon} alt='Настройки' />
       </NavLink>
 
-      <NavLink to='#' className='Menuicon Bottomicons-Desktopicon ' >
+      <a href='https://new.mospolytech.ru/' target='_blank' className='Menuicon Bottomicons-Desktopicon ' >
         <img src={computerIcon} alt='Компьютер' />
-      </NavLink>
+      </a>
     </div>
   </div>
 );
-

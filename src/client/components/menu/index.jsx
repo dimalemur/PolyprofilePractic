@@ -88,23 +88,28 @@ const linksForUser = [
 
 const linksForTeacher = [
   {
-    id: 'messages',
-    name: 'Расписание',
-    url: '/timetable',
+    id: 'Study',
+    name: 'ВУЗ',
+    links: [
+      {
+        name: 'Расписание',
+        url: '/timetable',
+      },
+      {
+        name: 'Образовательные программы',
+        url: '/faculties',
+      }
+    ],
   },
   {
     id: 'Career',
-    name: 'Карьера',
-    links: [
-      {
-        name: 'Дополнительные образовательные курсы',
-        url: '/additional_courses',
-      },
-      {
-        name: 'Анонсы научных мероприятий',
-        url: '/announcements',
-      },
-    ],
+    name: 'Мероприятия',
+    url: '/announcements',
+  },
+  {
+    id: 'myFinances',
+    name: 'Мои финансы',
+    url: '/myfinances',
   },
   {
     id: 'messages',
@@ -112,14 +117,19 @@ const linksForTeacher = [
     url: '/messages',
   },
   {
+    id: 'blanks',
+    name: 'Документы',
+    url: '/blanks',
+  },
+  {
+    id: 'digitalservices',
+    name: 'Cервисы',
+    url: '/digitalservices',
+  },
+  {
     id: 'feedback',
     name: 'Обратная связь',
-    links: [
-      {
-        name: 'Форма обратной связи',
-        url: '/feedback',
-      },
-    ],
+    url: '/feedback',
   },
 ];
 
@@ -186,16 +196,16 @@ const Menu = (props) => {
 
       <button className='Signout Menu-Signout List-Item' onClick={logOut}>
         Выход
-    </button>
+      </button>
 
       <div className='Settingicons Menu-Settingicons'>
         <NavLink to={`/${props.user}/settings`} className='Menuicon Settingicons-Setting' >
           <img src={settingsIcon} alt='Настройки' />
         </NavLink>
 
-        <NavLink to='#' className='Menuicon Settingicons-Desktop' >
+        <a href='https://new.mospolytech.ru/' target='_blank' className='Menuicon Settingicons-Desktop' >
           <img src={computerIcon} alt='Компьютер' />
-        </NavLink>
+        </a>
       </div>
     </div>
   );

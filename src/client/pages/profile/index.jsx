@@ -16,11 +16,13 @@ import { Announcements } from '../../components/announcements';
 import { Centers } from '../../components/centers';
 import { Questionnaire } from '../../components/questionnaire';
 import { FeedbackGen } from '../../components/feedbackGen';
+import { Blanks } from '../../components/blanks';
 import { Backgroundcontainer } from '../../components/backgroundcontainer';
 import { Backgrounds } from '../../components/backgrounds';
 import Settings from '../../components/settings';
 import { Interships } from '../../components/internships';
 import { Sertificates } from '../../components/sertificates';
+import { DigitalServices } from '../../components/digitalservices';
 import { WidthGetJobNews } from '../../highOrderComponents/asyncGetJobNews';
 import { asyncGetUserData } from '../../store/middleware/asyncGetUser';
 import { setMenuVisible, logOutPage } from '../../store/reducers/mainPageReducer';
@@ -62,20 +64,20 @@ const Profile = (props) => {
             <Backgroundcontainer
               page={Profilecontent}
               menuVisible={props.menuVisible}
-              background={Backgrounds.Blue}
+              background={Backgrounds.GreenBlue}
               user={user}
             />
           )}
         />
 
-        {/* Профиль */}
+        {/* Расписание преподавателя */}
         <Route exact
           path='/:user/timetable'
           render={() => (
             <Backgroundcontainer
               page={Timetableteach}
               menuVisible={props.menuVisible}
-              background={Backgrounds.Blue}
+              background={Backgrounds.GreenBlue}
               user={user}
             />
           )}
@@ -95,14 +97,14 @@ const Profile = (props) => {
           )}
         />
 
-        {/* Дополнительные курсы */}
+        {/* Образовательные программы */}
         <Route exact
-          path='/:user/additional_courses'
+          path='/:user/faculties'
           render={() => (
-            <Backgroundcontainer page={Additionalcourses}
+            <Backgroundcontainer
+              page={Faculties}
               menuVisible={props.menuVisible}
-              background={Backgrounds.YellowLightYellow}
-              bgDefault='Darkblue'
+              background={Backgrounds.GreenBlue}
             />
           )}
         />
@@ -118,6 +120,18 @@ const Profile = (props) => {
           )}
         />
 
+        {/* Мои финансы */}
+        < Route exact
+          path='/:user/myfinances'
+          render={() => (
+            <Backgroundcontainer
+              page={Myfinances}
+              menuVisible={props.menuVisible}
+              background={Backgrounds.Blue}
+            />
+          )}
+        />
+
         {/* Сообщения */}
         <Route exact
           path='/:user/messages'
@@ -126,6 +140,30 @@ const Profile = (props) => {
               page={MyMessages}
               menuVisible={props.menuVisible}
               background={Backgrounds.GreenBlue}
+            />
+          )}
+        />
+
+        {/* Бланки документов */}
+        <Route exact
+          path='/:user/blanks'
+          render={() => (
+            <Backgroundcontainer
+              page={Blanks}
+              menuVisible={props.menuVisible}
+              background={Backgrounds.BlueBig}
+            />
+          )}
+        />
+
+        {/* Цифровые сервисы */}
+        <Route exact
+          path='/:user/digitalservices'
+          render={() => (
+            <Backgroundcontainer
+              page={DigitalServices}
+              menuVisible={props.menuVisible}
+              background={Backgrounds.Blue}
             />
           )}
         />
@@ -164,7 +202,7 @@ const Profile = (props) => {
           <Backgroundcontainer
             page={Profilecontent}
             menuVisible={props.menuVisible}
-            background={Backgrounds.Blue}
+            background={Backgrounds.GreenBlue}
             user={user}
           />
         )}
