@@ -1,35 +1,128 @@
 .Authhelp {
+  width: 553px;
+  max-width: 90%;
+  height: 410px;
   display: flex;
-  justify-content: center;
-  align-items: center;
-  width: 291px;
-  height: 367px;
-  flex-direction: column;
-}
-.Question {
-  height: 30%;
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  &-Text {
-    font-family: 'Raleway' sans-serif;
+  flex-direction: row;
+  &-Form {
+    position: relative;
+    top: -17px;
+    text-align: center;
+    margin-bottom: 22px;
+  }
+  &-Button {
+    background: #ffffff;
+    border: 0.5px solid #121058;
+    box-sizing: border-box;
+    border-radius: 3px;
+    width: 89px;
+    height: 16px;
+    font-family: HelveticaNeueCyr, sans-serif;
     font-style: normal;
     font-weight: bold;
-    font-size: 18px;
-    line-height: 21px;
+    font-size: 7px;
+    line-height: 7px;
+    color: #121058;
+    margin: 0 auto;
+    margin-top: 9px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    &:hover {
+      background: #121058;
+      color: #ffffff;
+    }
   }
-  &-Icon {
-      margin-left: 25px;
-      img {
-          max-width: 10px;
-      }
+  &-Secondmode {
+    padding: 30px 0;
+    label {
+      font-family: HelveticaNeueCyr, sans-serif;
+      font-style: normal;
+      font-weight: 550;
+      font-size: 7px;
+      line-height: 7px;
+      color: #2f2f2f;
+      position: relative;
+      top: 8px;
+      left: -23px;
+      background: white;
+    }
+    input {
+      width: 189px;
+      height: 18px;
+      border: 0.5px solid #666262;
+      box-sizing: border-box;
+      border-radius: 3px;
+    }
+  }
+  &-Title {
+    font-family: Raleway, sans-serif;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 15px;
+    line-height: 15px;
+    margin-bottom: 20px;
+    color: #2c2a91;
+  }
+  &-Content {
+    width: 85%;
+    padding: 0 20px;
+  }
+  &-Block {
+    font-family: HelveticaNeueCyr, sans-serif;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 11px;
+    line-height: 15px;
+    margin-bottom: 22px;
   }
 }
 
-hr {
-    background-color:black;
-    border:none;
-    height: 1px;
-    margin: 0;
-    width: 100%;
+.Block {
+  &-Text {
+    &_blue {
+      color: rgba(18, 16, 88, 0.7);
+      font-weight: bold;
+    }
+    &_red {
+      color: #e03f3f;
+      font-weight: bold;
+    }
+  }
+}
+
+.Navigation {
+  &-Item {
+    margin: 15px 0;
+    padding: 5px;
+    font-family: Raleway, sans-serif;
+    font-style: normal;
+    font-size: 11px;
+    line-height: 13px;
+    font-weight: 500;
+    color: #666262;
+    cursor: pointer;
+    &_link {
+      color: #121058;
+    }
+    &_active {
+      &_true {
+        color: #000000;
+        font-weight: bold;
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 503px) {
+  .Authhelp {
+    height: auto;
+    display: flex;
+    flex-direction: column-reverse;
+    width: auto;
+  }
+  .Authorization {
+    width: auto;
+  }
 }

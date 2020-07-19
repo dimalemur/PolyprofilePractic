@@ -70,17 +70,6 @@ const Authorization = (props) => {
               <button className='Button-Red' type='submit' onClick={submitForm} > Войти </button>
             </div>
 
-            <span className='Help-Or'>
-              Или
-                        </span>
-            <div className='Button Form-Button'>
-              <button className='Button-Blue'
-                onClick={(event) => event.preventDefault()}
-              >
-                Войти с помощью Google
-              </button>
-            </div>
-
           </form>
         </div>
 
