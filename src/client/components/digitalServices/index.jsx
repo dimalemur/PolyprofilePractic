@@ -2,7 +2,7 @@
 /* eslint-disable react/no-unescaped-entities */
 import React from 'react';
 import './digitalservices.pcss';
-import { Modalsertificates } from '../modalsertificates';
+import { Modalservices } from '../modalservices';
 import Regnavbar from '../regnavbar';
 import searchIcon from '../../../source/images/icons/search.png';
 
@@ -174,7 +174,7 @@ export const DigitalServices = (props) => {
 
         </div>
 
-        <Modalsertificates isOpenDialog={isOpenDialog} setOpenDialog={setOpenDialog} />
+        <Modalservices isOpenDialog={isOpenDialog} setOpenDialog={setOpenDialog} />
 
       </div >
     </div >
