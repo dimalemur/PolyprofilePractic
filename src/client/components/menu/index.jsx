@@ -117,14 +117,18 @@ const linksForTeacher = [
     url: '/messages',
   },
   {
-    id: 'blanks',
-    name: 'Документы',
-    url: '/blanks',
-  },
-  {
-    id: 'digitalservices',
-    name: 'Cервисы',
-    url: '/digitalservices',
+    id: 'certificates',
+    name: 'Справки',
+    links: [
+      {
+        name: 'Бланки документов',
+        url: '/blanks',
+      },
+      {
+        name: 'Цифровые сервисы',
+        url: '/digitalservices',
+      },
+    ],
   },
   {
     id: 'feedback',
