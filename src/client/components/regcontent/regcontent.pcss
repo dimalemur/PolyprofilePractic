@@ -22,7 +22,7 @@
 
 .Menu {
   &-Icon {
-    padding: 0 30px;
+    padding: 0;
     line-height: 10px;
     display: none;
   }
@@ -82,7 +82,7 @@
 @media screen and (max-width: 640px) {
   .Regcontent {
     &-Programmer {
-      left: 2vw;
+      left: -64px;
     }
   }
 
@@ -107,6 +107,14 @@
     }
     &-Text {
       font-size: 12pt;
+      line-height: 14px;
+      color: #ffffff;
+      padding: 0 0 0 6px;
+    }
+    &_second {
+      font-weight: normal;
+      font-size: 10pt;
+      line-height: 12px;
     }
   }
 }
@@ -116,6 +124,7 @@
     &-Icon {
       width: 80%;
       text-align: right;
+      max-width: 40px;
     }
   }
 }
