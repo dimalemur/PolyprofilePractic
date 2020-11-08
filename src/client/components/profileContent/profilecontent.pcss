@@ -142,26 +142,49 @@
 
 @media screen and (max-width: 640px) {
   .Ava {
+    flex-direction: row;
+    margin: 0 53px;
+    padding-bottom: 30px;
     &-Text {
-      font-size: 1em;
+      font-size: 16px;
+      line-height: 18px;
+      font-weight: 400;
     }
     &-Img {
-      height: 7.5em;
+      height: 70px;
+      width: 70px;
+      margin-right: 36px;
     }
   }
 
   .Infoblock {
+    border: none;
+    padding-left: 20px;
+    padding-right: 10px;
     &-Title {
-      font-size: 1em;
+      font-size: 18px;
+      line-height: 18px;
+      font-weight: 700;
+      color: #121058;
+      background: #ffffff;
+      border: none;
+      padding-left: 0px;
     }
     &-Orders {
+      padding: 20px 0;
       a {
         font-size: 1em;
       }
     }
   }
+
   .Profilecontent {
     padding-left: 0;
+    &-Info {
+      padding: 0;
+      padding-top: 40px;
+      padding-bottom: 40px;
+    }
     &-Wrap {
       width: 90%;
     }
@@ -179,9 +202,40 @@
       right: 0;
     }
   }
+
   .Infoline {
     font-size: 1em;
   }
+
+  .Personinfo {
+    &-Content {
+      padding: 0px;
+    }
+    &-Name {
+      margin-top: 15px;
+      .Infoline {
+        text-align: left;
+        margin: 0;
+        margin-bottom: 15px;
+        font-size: 15px;
+        line-height: 15px;
+        font-weight: 550;
+      }
+    }
+    &-Value {
+      margin-top: 15px;
+      margin-left: 10px;
+      .Infoline {
+        margin: 0;
+        margin-bottom: 15px;
+        font-size: 14px;
+        line-height: 14px;
+        font-weight: 300;
+        white-space: pre-line;
+      }
+    }
+  }
+
 }
 
 @media screen and (max-width: 900px) {
