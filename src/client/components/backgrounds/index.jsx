@@ -9,6 +9,7 @@ import orangeMask from '../../../source/images/orange mask.png';
 import blueMask from '../../../source/images/blue mask.png';
 import vector13 from '../../../source/images/Vector13.svg';
 import blueBig from '../../../source/images/blue big.svg';
+import blueUp from '../../../source/images/blue up.svg';
 
 const GreenBlue = () => (
   <div className='Backgroundcontainer-Wrap Wrap-Blue'>
@@ -53,6 +54,12 @@ const BlueBig = () => (
     <img className='Backgroundcontainer-Bluemask' src={blueBig} />
   </div>
 );
+
+const BlueUp = () => (
+  <div className='Backgroundcontainer-Wrap Wrap-Blue'>
+    <img className='Backgroundcontainer-Bluemask' src={blueUp} />
+  </div>
+);
 export const Backgrounds = {
   GreenBlue,
   Blue,
@@ -61,4 +68,5 @@ export const Backgrounds = {
   CurveOrange,
   CurveVectorBLue,
   BlueBig,
+  BlueUp,
 };
