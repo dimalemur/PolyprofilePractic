@@ -164,4 +164,112 @@ a {
       transition: all 0.3s ease-out;
     }
   }
+
+  .Userinfo {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    &-Icon {
+      margin: 28px 0 0 18px;
+      img {
+        width: 62px;
+        height: 62px;
+      }
+    }
+    &-Info {
+      text-decoration: none;
+      margin-left: 20px;
+      margin-top: 45px;
+      text-align: left;
+      font-family: Raleway, sans-serif;
+      font-style: normal;
+      font-weight: 600;
+      font-size: 18px;
+      line-height: 22px;
+      color: #ffffff;
+    }
+  }
+
+  .List {
+    padding: 0;
+    margin: 0;
+    &-Item {
+      background: #302c2c;
+      font-family: Raleway, sans-serif;
+      font-style: normal;
+      font-weight: 500;
+      font-size: 26px;
+      line-height: 32px;
+      color: #ffffff;
+      list-style: none;
+      width: 100vw;
+      text-align: left;
+      padding: 15px 0 15px 51px;
+    }
+    &-Item:hover,
+    &-Item:active {
+      background: #302c2c;
+      cursor: pointer;
+      label {
+        color: #e03f3f;
+      }
+    }
+    &-Item label {
+      display: inline-block;
+      width: 100vw;
+      height: auto;
+    }
+  }
+
+  .Innerlist {
+    display: none;
+    padding: 0;
+
+    &-Initem {
+      background: #302c2c;
+      font-family: Raleway, sans-serif;
+      font-style: normal;
+      font-weight: 500;
+      font-size: 20px;
+      line-height: 24px;
+      list-style: none;
+      width: 80vw;
+      padding-top: 10px;
+      padding-bottom: 10px;
+      padding-left: 19px;
+      text-align: left;
+      a {
+        color: #ffffff;
+      }
+      a:hover,
+      a:active {
+        font-weight: 500;
+        font-size: 20px;
+        line-height: 24px;
+        color: #ffffff;
+      }
+    }
+  }
+
+  .Settingicons {
+    display: flex;
+    flex-direction: row;
+    align-items: flex-end;
+    width: 90vw;
+    &-Setting {
+      margin-left: 10px;
+      margin-right: auto;
+    }
+    &-Desktop {
+      margin-right: 10px;
+    }
+  }
+
+  .Menuicon {
+    img {
+      width: 40px;
+      height: 40px;
+    }
+  }
+
 }

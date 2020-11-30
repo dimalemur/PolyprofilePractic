@@ -13,7 +13,7 @@ const Regnavbar = (props) => (
       </div>
       <div className='Logo-Text'>
         <span className='Logo_first'>Личный кабинет</span>
-        <span className='Logo_second' >Студентов и преподавателей</span>
+        <span className='Logo_second' >студентов и преподавателей</span>
       </div>
     </div>
 

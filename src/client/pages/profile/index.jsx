@@ -202,7 +202,7 @@ const Profile = (props) => {
           <Backgroundcontainer
             page={Profilecontent}
             menuVisible={props.menuVisible}
-            background={Backgrounds.GreenBlue}
+            background={Backgrounds.BlueUp}
             user={user}
           />
         )}
@@ -214,7 +214,7 @@ const Profile = (props) => {
           <Backgroundcontainer
             page={Settings}
             menuVisible={props.menuVisible}
-            background={Backgrounds.Blue}
+            background={Backgrounds.BlueUp}
             fixPosition={fixPosition}
             setFixPosition={setFixPosition}
           />
@@ -228,7 +228,7 @@ const Profile = (props) => {
           <Backgroundcontainer
             page={Grades}
             menuVisible={props.menuVisible}
-            background={Backgrounds.GreenBlue}
+            background={Backgrounds.BlueUp}
           />
         )}
       />
