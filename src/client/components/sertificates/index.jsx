@@ -48,8 +48,7 @@ export const Sertificates = (props) => {
 
         <div className="Sertificates-Content Content_white ">
           <div className="Content-Description Content-Header">
-            На этой странице Вы можете заказать необходимую справку, подать заявление <br />
-             или сделать запрос.
+            На этой странице Вы можете заказать необходимую справку, подать заявление или сделать запрос.
           </div>
 
           <div className="Content-Helpline Text_orange Content-Header"
@@ -196,4 +195,3 @@ export const Sertificates = (props) => {
     </div >
   );
 };
-

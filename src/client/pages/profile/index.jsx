@@ -64,7 +64,7 @@ const Profile = (props) => {
             <Backgroundcontainer
               page={Profilecontent}
               menuVisible={props.menuVisible}
-              background={Backgrounds.GreenBlue}
+              background={Backgrounds.BlueUp}
               user={user}
             />
           )}
@@ -77,7 +77,7 @@ const Profile = (props) => {
             <Backgroundcontainer
               page={Timetableteach}
               menuVisible={props.menuVisible}
-              background={Backgrounds.GreenBlue}
+              background={Backgrounds.BlueUp}
               user={user}
             />
           )}
@@ -90,7 +90,7 @@ const Profile = (props) => {
             <Backgroundcontainer
               page={Settings}
               menuVisible={props.menuVisible}
-              background={Backgrounds.Blue}
+              background={Backgrounds.BlueUp}
               fixPosition={fixPosition}
               setFixPosition={setFixPosition}
             />
@@ -104,7 +104,7 @@ const Profile = (props) => {
             <Backgroundcontainer
               page={Faculties}
               menuVisible={props.menuVisible}
-              background={Backgrounds.GreenBlue}
+              background={Backgrounds.BlueUp}
             />
           )}
         />
@@ -139,7 +139,7 @@ const Profile = (props) => {
             <Backgroundcontainer
               page={MyMessages}
               menuVisible={props.menuVisible}
-              background={Backgrounds.GreenBlue}
+              background={Backgrounds.BlueUp}
             />
           )}
         />
@@ -240,7 +240,7 @@ const Profile = (props) => {
           <Backgroundcontainer
             page={Timetable}
             menuVisible={props.menuVisible}
-            background={Backgrounds.GreenBlue}
+            background={Backgrounds.BlueUp}
           />
         )}
       />
@@ -252,7 +252,7 @@ const Profile = (props) => {
           <Backgroundcontainer
             page={Visits}
             menuVisible={props.menuVisible}
-            background={Backgrounds.GreenBlue}
+            background={Backgrounds.BlueUp}
           />
         )}
       />
@@ -264,7 +264,7 @@ const Profile = (props) => {
           <Backgroundcontainer
             page={Faculties}
             menuVisible={props.menuVisible}
-            background={Backgrounds.GreenBlue}
+            background={Backgrounds.BlueUp}
           />
         )}
       />
@@ -288,7 +288,7 @@ const Profile = (props) => {
           <Backgroundcontainer
             page={WidthGetJobNews}
             menuVisible={props.menuVisible}
-            background={Backgrounds.Blue}
+            background={Backgrounds.CurveBLue}
           />
         )}
       />
@@ -324,7 +324,7 @@ const Profile = (props) => {
           <Backgroundcontainer
             page={Sertificates}
             menuVisible={props.menuVisible}
-            background={Backgrounds.Blue}
+            background={Backgrounds.BlueUp}
           />
         )}
       />
@@ -336,7 +336,7 @@ const Profile = (props) => {
           <Backgroundcontainer
             page={MyMessages}
             menuVisible={props.menuVisible}
-            background={Backgrounds.GreenBlue}
+            background={Backgrounds.BlueUp}
           />
         )}
       />

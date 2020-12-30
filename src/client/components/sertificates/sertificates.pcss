@@ -257,11 +257,108 @@
     display: block;
   }
 
+  .Sertificates-Title {
+    font-size: 32px;
+    text-align: center;
+  }
+
   .Bg_yellow {
     border-radius: 0 5px 0 0;
   }
   .Cards-Rb {
     border-left: 15px solid #fff6a0;
     border-right: 0px;
+  }
+}
+
+@media screen and (max-width: 450px) {
+  .Sertificates-Content {
+    padding: 25px 0;
+  }
+
+  .Content {
+    &-Header {
+      width: 80%;
+      padding: 0 25px;
+    }
+    &-Description {
+      text-align: justify;
+      font-family: Raleway, sans-serif;
+      font-style: normal;
+      font-weight: 300;
+      font-size: 13px;
+      line-height: 15px;
+    }
+    &-Helpline {
+      margin: 25px 0;
+      text-align: center;
+    }
+  }
+
+  .Searchdoc-Inp {
+    font-size: 9px;
+  }
+
+  .Border {
+    &_yellow {
+      margin: 0;
+    }
+    &_lightgreen {
+      margin: 0;
+      border-right: 15px solid #c0e9d7;
+      border-radius: 0;
+    }
+    &_green {
+      margin: 0;
+      border-right: 15px solid #21aa93;
+      border-radius: 0;
+    }
+    &_lightblue {
+      margin: 0;
+      border-right: 15px solid #72a6eb;
+      border-radius: 0;
+    }
+    &_blue {
+      margin: 0;
+      border-right: 15px solid #2a66b6;
+      border-radius: 0;
+    }
+    &_violet {
+      margin: 0;
+      border-right: 15px solid #3533ac;
+      border-radius: 0;
+    }
+  }
+
+  .Bg {
+    &_yellow {
+      border-radius: 0;
+    }
+    &_lightgreen {
+      border-radius: 0;
+    }
+    &_green {
+      border-radius: 0;
+    }
+    &_lightblue {
+      border-radius: 0;
+    }
+    &_blue {
+      border-radius: 0;
+    }
+    &_violet {
+      border-radius: 0;
+    }
+  }
+
+  .Cards {
+    &-Rb {
+      border-right: 15px solid #fff6a0 !important;
+      border-left: 0px !important;
+    }
+    &-Lb {
+      border-left: 0px;
+      border-radius: 0;
+    }
   }
 }
