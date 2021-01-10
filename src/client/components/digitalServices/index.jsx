@@ -127,49 +127,33 @@ export const DigitalServices = (props) => {
           </div>
 
           <div className={`ContentDS-Table TableDS-Isvisible_${isVisibleHistoryReq}`}>
-            <div className="TableDS-Rowname">
-              №
-            </div>
-            <div className="TableDS-Rowname">
-              Номер заявки
-            </div>
-            <div className="TableDS-Rowname">
-              Тема обращения
-            </div>
-            <div className="TableDS-Rowname">
-              Текст заявки
-            </div>
-            <div className="TableDS-Rowname">
-              Подразделение
-            </div>
-            <div className="TableDS-Rowname">
-              Дата, время
+
+            <div className="HistoryCardDS">
+              <div className="History-Date">
+                12.03.2020 13:41
+              </div>
+              <div className="History-Titles">
+                <p>Номер заявки:</p>
+                <p>Тема обращения:</p>
+                <p>Текст заявки:</p>
+                <p>Подразделение:</p>
+              </div>
+              <div className="History-Info">
+                <p>1742</p>
+                <p>Справка с места работы</p>
+                <p>
+                  Подразделение: Центр разработки и поддержки информационных систем <br />
+                  Должность: начальник центра <br />
+                  Моб. телефон: +7 (969) 343-99-77 <br />
+                  Площадка: Б. Семёновская, д. 38 <br />
+                  Номер аудитории: A-424 <br />
+                  Заявка: Хочу получить справку для личных нужд <br />
+                  Способ получения: МФЦ Большая Семеновская, 38, ауд.В107 <br />
+                </p>
+                <p>Отдел кадров, вн.тел 1130</p>
+              </div>
             </div>
 
-            <div className="TableDS-Cell">
-              1
-            </div>
-            <div className="TableDS-Cell">
-              1742
-            </div>
-            <div className="TableDS-Cell">
-              Справка с места работы
-            </div>
-            <div className="TableDS-Cell Cell-Request">
-              Подразделение: Центр разработки и поддержки информационных систем <br />
-              Должность: начальник центра <br />
-              Моб. телефон: +7 (969) 343-99-77 <br />
-              Площадка: Б. Семёновская, д. 38 <br />
-              Номер аудитории: A-424 <br />
-              Заявка: Хочу получить справку для личных нужд <br />
-              Способ получения: МФЦ Большая Семеновская, 38, ауд.В107 <br />
-            </div>
-            <div className="TableDS-Cell">
-              Отдел кадров, вн.тел 1130
-            </div>
-            <div className="TableDS-Cell">
-              12 марта 2020 13:41
-            </div>
           </div>
 
         </div>

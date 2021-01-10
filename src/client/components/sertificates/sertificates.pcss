@@ -98,9 +98,10 @@
     font-weight: normal;
     font-size: 14px;
     line-height: 14px;
-    display: grid;
-    grid-template-columns: 1fr 1.5fr 1.5fr 1fr 2fr;
-    margin-bottom: 55px;
+    display: flex;
+    flex-flow: wrap;
+    justify-content: center;
+    margin-bottom: 45px;
   }
 }
 
@@ -108,27 +109,69 @@
   &-Isvisible_false {
     display: none;
   }
-  &-Rowname {
-    border: 1px solid #c4c4c4;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    text-align: center;
-    font-weight: bold;
+}
+
+.needspace {
+  margin-top: 27px;
+}
+
+.needspaceMore {
+  margin-top: 42px;
+}
+
+.HistoryCard {
+  border: 0.7px solid #C4C4C4;
+  border-radius: 5px;
+  display: grid;
+  grid-template-areas:
+    "a a"
+    "b c"
+    "b c"
+    "b c";
+  padding: 16px;
+  margin-left: 20px;
+  margin-right: 20px;
+  margin-bottom: 10px;
+  max-width: 280px;
+}
+
+.History {
+  &-Date {
+    grid-area: a;
+    font-family: HelveticaNeueCyr Medium, sans-serif;
+    font-weight: 550;
+    font-size: 16px;
+    line-height: 16px;
+    color: #2F2F2F;
+    text-align: left;
   }
-  &-Cell {
-    border: 1px solid #c4c4c4;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    text-align: center;
-    padding: 13.18px 22px;
+  &-Titles {
+    grid-area: b;
+    font-family: HelveticaNeueCyr Light, sans-serif;
+    font-weight: 300;
+    font-size: 14px;
+    line-height: 14px;
+    color: #000000;
+    text-align: right;
+  }
+  &-Info {
+    grid-area: c;
+    font-family: HelveticaNeueCyr Light, sans-serif;
+    font-weight: 300;
+    font-size: 14px;
+    line-height: 14px;
+    color: #000000;
+    text-align: left;
+    margin-left: 15px;
   }
 }
 
-.Cell {
-  &_green {
-    background: #c0e9d7;
+.Status {
+  &-green {
+    color: #479F79;
+  }
+  &-red {
+    color: #E03F3F;
   }
 }
 
