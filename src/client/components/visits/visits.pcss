@@ -12,6 +12,11 @@
   }
   &-Inner {
     padding-top: 36px;
+    display: grid;
+    grid-template-areas:
+      "journail"
+      "visitsTable"
+      "visitsCount";
   }
   &-Title {
     font-weight: bold;
@@ -34,6 +39,7 @@
   }
 
   &-Count {
+    grid-area: visitsCount;
     display: flex;
     flex-flow: column wrap;
     font-family: Roboto;
@@ -46,12 +52,12 @@
 
   .Count {
     &-Have {
-      white-space: nowrap;
+      white-space: pre-wrap;
       margin-top: 15px;
       margin-bottom: 15px;
     }
     &-All {
-      white-space: nowrap;
+      white-space: pre-wrap;
       margin-top: 15px;
       margin-bottom: 15px;
     }
@@ -91,6 +97,7 @@
 }
 
 .Visitstable {
+  grid-area: visitsTable;
   margin-top: 32px;
   margin-bottom: 30px;
   border-bottom: 2px solid #000000;
@@ -150,6 +157,7 @@
 }
 
 .Journal {
+  grid-area: journail;
   text-align: center;
   &-Title {
     color: #121058;
@@ -181,6 +189,7 @@
     }
   }
   .Visitstable {
+    margin-top: 15px;
     &-Content {
       font-size: 0.7rem;
     }
@@ -199,7 +208,19 @@
     &-Content {
       padding: 0 5% 36px;
     }
+    &-Inner {
+      padding-top: 16px;
+      grid-template-areas:
+        "journail"
+        "visitsCount"
+        "visitsTable";
+    }
   }
+
+  .Journal {
+    padding-top: 20px;
+  }
+
 }
 
 @media screen and (max-width: 950px) {
@@ -210,8 +231,8 @@
   }
   .Visitstable {
     &-Content {
-      grid-template-columns: 25% 75%;
-      font-size: 0.8rem;
+      grid-template-columns: 30% 70%;
+      font-size: 0.7rem;
     }
   }
 }

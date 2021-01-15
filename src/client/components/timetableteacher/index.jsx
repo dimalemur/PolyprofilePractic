@@ -73,28 +73,28 @@ const Timetableteacher = (props) => {
           {/* --------------------------------------------------------------------------- */}
           <div className='Uptable-Table'>
             <div className='Cell Table-Cell_lightgray'></div>
-            <div className='Cell Table-Cell_lightgreen'>
+            <div className='Cell Table-Cell_lightgreen headerMonday'>
               Понедельник
             </div>
-            <div className='Cell Table-Cell_lightgreen'>
+            <div className='Cell Table-Cell_lightgreen headerTuesday'>
               Вторник
             </div>
-            <div className='Cell Table-Cell_lightgreen'>
+            <div className='Cell Table-Cell_lightgreen headerWednesday'>
               Среда
             </div>
-            <div className='Cell Table-Cell_lightgreen'>
+            <div className='Cell Table-Cell_lightgreen headerThursday'>
               Четверг
             </div>
-            <div className='Cell Table-Cell_lightgreen'>
+            <div className='Cell Table-Cell_lightgreen headerFriday'>
               Пятница
             </div>
-            <div className='Cell Table-Cell_lightgreen'>
+            <div className='Cell Table-Cell_lightgreen headerSaturday'>
               Суббота
             </div>
-            <div className='Cell Table-Cell_lightorange'>
+            <div className='Cell Table-Cell_lightorange timeFirst'>
               9:00 - 10:30
             </div>
-            <div className='Cell Table-Cell_lightblue'>
+            <div className='Cell Table-Cell_lightblue lessFirstMonday'>
               <div className='Cell-Title'>
                 Программная инженерия
               </div>
@@ -116,10 +116,10 @@ const Timetableteacher = (props) => {
 
             {/* --------------------------------------------------------------------------- */}
 
-            <div className='Cell Table-Cell_orange'>
+            <div className='Cell Table-Cell_orange timeSecond'>
               10:40 - 12:10
             </div>
-            <div className='Cell Table-Cell_lightblue'>
+            <div className='Cell Table-Cell_lightblue lessSecondMonday'>
               <div className='Cell-Title'>
                 Программная инженерия
               </div>
@@ -133,7 +133,7 @@ const Timetableteacher = (props) => {
               </div>
             </div>
             <div></div>
-            <div className='Cell Table-Cell_lightblue'>
+            <div className='Cell Table-Cell_lightblue lessSecondWednesday'>
               <div className='Cell-Title'>
                 Программная инженерия
               </div>
@@ -146,7 +146,7 @@ const Timetableteacher = (props) => {
                 12 сен - 26 дек
               </div>
             </div>
-            <div className='Cell Table-Cell_lightblue'>
+            <div className='Cell Table-Cell_lightblue lessSecondThursday'>
               <div className='Cell-Title'>
                 Программная инженерия
               </div>
@@ -160,7 +160,7 @@ const Timetableteacher = (props) => {
               </div>
             </div>
             <div></div>
-            <div className='Cell Table-Cell_lightblue'>
+            <div className='Cell Table-Cell_lightblue lessSecondSaturday'>
               <div className='Cell-Title'>
                 Программная инженерия
               </div>
@@ -177,11 +177,11 @@ const Timetableteacher = (props) => {
 
             {/* --------------------------------------------------------------------------- */}
 
-            <div className='Cell Table-Cell_lightorange'>
+            <div className='Cell Table-Cell_lightorange timeThird'>
               12:20 - 13:50
             </div>
             <div></div>
-            <div className='Cell Table-Cell_rose'>
+            <div className='Cell Table-Cell_rose lessThirdTuesday'>
               <div className='Cell-Title'>
                 Алгоритмизация и программирование
               </div>
@@ -197,7 +197,7 @@ const Timetableteacher = (props) => {
             <div></div>
             <div></div>
             <div></div>
-            <div className='Cell Table-Cell_lightblue'>
+            <div className='Cell Table-Cell_lightblue lessThirdSaturday'>
               <div className='Cell-Title'>
                 Программная инженерия
               </div>
@@ -214,10 +214,10 @@ const Timetableteacher = (props) => {
 
             {/* --------------------------------------------------------------------------- */}
 
-            <div className='Cell Table-Cell_orange'>
+            <div className='Cell Table-Cell_orange timeFourth'>
               14:30 - 16:00
             </div>
-            <div className='Cell Table-Cell_lightblue'>
+            <div className='Cell Table-Cell_lightblue lessFourthMonday'>
               <div className='Cell-Title'>
                 Программная инженерия
               </div>
@@ -231,7 +231,7 @@ const Timetableteacher = (props) => {
               </div>
             </div>
             <div></div>
-            <div className='Cell Table-Cell_lightblue'>
+            <div className='Cell Table-Cell_lightblue lessFourthWednesday'>
               <div className='Cell-Title'>
                 Программная инженерия
               </div>
@@ -252,7 +252,7 @@ const Timetableteacher = (props) => {
 
             {/* --------------------------------------------------------------------------- */}
 
-            <div className='Cell Table-Cell_lightorange'>
+            <div className='Cell Table-Cell_lightorange timeFifth'>
               16:10 - 17:40
             </div>
             <div></div>
@@ -265,7 +265,7 @@ const Timetableteacher = (props) => {
 
             {/* --------------------------------------------------------------------------- */}
 
-            <div className='Cell Table-Cell_orange'>
+            <div className='Cell Table-Cell_orange timeSixth'>
               17:50 - 19:20
             </div>
             <div></div>
@@ -277,7 +277,7 @@ const Timetableteacher = (props) => {
             {/* --------------------------------------------------------------------------- */}
             {/* --------------------------------------------------------------------------- */}
 
-            <div className='Cell Table-Cell_lightorange'>
+            <div className='Cell Table-Cell_lightorange timeSeventh'>
               19:30 - 21:00
             </div>
             <div></div>
