@@ -42,7 +42,7 @@
   flex-direction: row;
   justify-content: center;
   width: 100%;
-  height: 73px;
+  max-height: 73px;
   margin: 0;
 }
 
@@ -349,51 +349,361 @@
   cursor: pointer;
 }
 
-@media screen and (max-width: 1000px) {
+@media screen and (min-width: 1351px) and (max-width: 1650px) {
+  .MyMessages-form {
+    grid-template-columns: 45% 55%;
+  }
+
   .name-cont {
+    font-size: 17px;
+    line-height: 17px;
+  }
+
+  .ava-mes img {
+    width: 58px;
+    height: 58px;
+  }
+
+  .last-mes p {
+    font-size: 17px;
+    line-height: 17px;
+  }
+
+  .last-mes-new p {
+    font-size: 17px;
+    line-height: 17px;
+  }
+
+  .time p {
     font-size: 13px;
+    line-height: 13px;
+  }
+
+  .name {
+    font-size: 20px;
+    line-height: 20px;
+  }
+
+  .post {
+    font-size: 16px;
+    line-height: 16px;
+  }
+
+  .text-mes {
+    font-size: 14px;
+    line-height: 16px;
+  }
+
+  .time-mes {
+    font-size: 10px;
+    line-height: 16px;
+  }
+
+  .write {
+    height: 70px;
+  }
+
+  .field-write {
+    margin: 25px 0 22px 35px;
+    font-size: 18px;
+    line-height: 18px;
+  }
+
+  .add-files img {
+    width: 26px;
+    height: 28px;
+  }
+
+  .send-mes img{
+    width: 28px;
+    height: 26px;
+  }
+
+  .date {
+    font-size: 13px;
+    line-height: 13px;
   }
 }
 
-@media screen and (max-width: 900px) {
+@media screen and (min-width: 1051px) and (max-width: 1350px) {
+  .MyMessages-form {
+    grid-template-columns: 45% 55%;
+  }
+
+  .name-cont {
+    font-size: 14px;
+    line-height: 14px;
+  }
+
+  .ava-mes img {
+    width: 48px;
+    height: 48px;
+  }
+
+  .last-mes p {
+    font-size: 14px;
+    line-height: 14px;
+  }
+
+  .last-mes-new p {
+    font-size: 14px;
+    line-height: 14px;
+  }
+
+  .time p {
+    font-size: 10px;
+    line-height: 10px;
+  }
+
+  .name {
+    font-size: 16px;
+    line-height: 16px;
+  }
+
+  .post {
+    font-size: 12px;
+    line-height: 12px;
+  }
+
+  .text-mes {
+    font-size: 12px;
+    line-height: 14px;
+  }
+
+  .time-mes {
+    font-size: 8px;
+    line-height: 14px;
+  }
+
+  .Btn-CreateDialog {
+    width: 66px;
+    height: 66px;
+  }
+
+  .header-dialog {
+    height: 97px;
+    background-color: #ffffff;
+    display: flex;
+    flex-direction: row;
+    border-left: 1px solid #E5E5E5;
+  }
+
+  .more-options {
+    margin: 35px 30px 34px 0;
+  }
+
+  .search {
+    height: 66px;
+    margin: 0;
+  }
+
+  .field-search {
+    font-size: 16px;
+    line-height: 19px;
+  }
+
+  .img-search {
+    padding: 12px 20px 11px;
+    background: #ffffff;
+    border: none;
+  }
+
+  .write {
+    height: 80px;
+  }
+
+  .field-write {
+    margin: 25px 0 22px 35px;
+    font-size: 16px;
+    line-height: 16px;
+  }
+
+  .add-files img {
+    width: 22px;
+    height: 24px;
+  }
+
+  .send-mes img{
+    width: 24px;
+    height: 22px;
+  }
+
+  .date {
+    font-size: 11px;
+    line-height: 11px;
+  }
+
+  .new-count {
+    width: 20px;
+    height: 20px;
+    font-size: 12px;
+    line-height: 12px;
+  }
+
+  .info {
+    width: 65%;
+  }
+}
+
+@media screen and (min-width: 641px) and (max-width: 1050px) {
   .MyMessages-form {
     display: grid;
     grid-template-columns: 100%;
-    grid-template-rows: 50% 50%;
+    grid-template-rows: 100%;
   }
   .contacts {
     grid-column: 1;
     grid-row: 1;
   }
   .dialog {
-    grid-column: 1;
-    grid-row: 2;
+    display: none;
   }
   .search, .contact {
-    width: 92%;
+    width: 99%;
+    border-left: 5px solid #e5e5e5;
   }
   .header-dialog {
     border-radius: 0;
   }
 }
 
-@media screen and (max-width: 590px) {
-  .search, .contact, .field-search, .field-write {
-    width: 87.18%;
+@media screen and (max-width: 640px) {
+  .MyMessages {
+    position: relative;
+    &-Inner {
+      width: 100%;
+      max-width: 100%;
+    }
+    &-Title {
+      margin-left: 25px;
+    }
   }
+
+  .MyMessages-form {
+    display: grid;
+    grid-template-columns: 100%;
+    grid-template-rows: 100%;
+  }
+  .contacts {
+    grid-column: 1;
+    grid-row: 1;
+  }
+
+  .dialog {
+    display: none;
+  }
+
   .search, .contact {
-    margin-left: 20px;
+    width: 99%;
+    border-left: 5px solid #e5e5e5;
   }
+
+  .header-dialog {
+    border-radius: 0;
+  }
+
+}
+
+@media screen and (max-width: 475px) {
+  .write {
+    height: 70px;
+  }
+
+  .field-write {
+    margin: 25px 0 22px 25px;
+    font-size: 12px;
+    line-height: 12px;
+  }
+
+  .add-files {
+    margin: 13px 0 13px 32px;
+    img {
+      width: 24px;
+      height: 26px;
+    }
+  }
+
+  .send-mes img{
+    width: 26px;
+    height: 24px;
+  }
+}
+
+@media screen and (max-width: 540px) {
   .name-cont {
-    font-size: 10px;
-  }
-  .last-mes {
-    font-size: 9px;
-  }
-  .name {
     font-size: 14px;
+    line-height: 14px;
   }
+
+  .ava-mes img {
+    width: 48px;
+    height: 48px;
+  }
+
+  .last-mes p {
+    font-size: 14px;
+    line-height: 14px;
+  }
+
+  .last-mes-new p {
+    font-size: 14px;
+    line-height: 14px;
+  }
+
+  .time p {
+    font-size: 10px;
+    line-height: 10px;
+  }
+
+  .name {
+    font-size: 16px;
+    line-height: 16px;
+  }
+
   .post {
     font-size: 12px;
+    line-height: 12px;
+  }
+
+  .text-mes {
+    font-size: 12px;
+    line-height: 14px;
+  }
+
+  .time-mes {
+    font-size: 8px;
+    line-height: 14px;
+  }
+
+  .Btn-CreateDialog {
+    width: 66px;
+    height: 66px;
+  }
+
+  .search {
+    height: 66px;
+    margin: 0;
+  }
+
+  .field-search {
+    font-size: 16px;
+    line-height: 19px;
+  }
+
+  .img-search {
+    padding: 12px 20px 11px;
+    background: #ffffff;
+    border: none;
+  }
+
+  .new-count {
+    width: 20px;
+    height: 20px;
+    font-size: 12px;
+    line-height: 12px;
+  }
+
+  .info {
+    width: 65%;
   }
 }
