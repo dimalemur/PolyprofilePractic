@@ -48,8 +48,7 @@ export const Sertificates = (props) => {
 
         <div className="Sertificates-Content Content_white ">
           <div className="Content-Description Content-Header">
-            На этой странице Вы можете заказать необходимую справку, подать заявление <br />
-             или сделать запрос.
+            На этой странице Вы можете заказать необходимую справку, подать заявление или сделать запрос.
           </div>
 
           <div className="Content-Helpline Text_orange Content-Header"
@@ -82,40 +81,45 @@ export const Sertificates = (props) => {
           </div>
 
           <div className={`Content-Table Table-Isvisible_${isVisibleHistoryReq}`}>
-            <div className="Table-Rowname">
-              Дата
+            <div className="HistoryCard">
+              <div className="History-Date">
+                27.02.2019
               </div>
-            <div className="Table-Rowname">
-              Рег. номер
+              <div className="History-Titles">
+                <p>Рег. номер:</p>
+                <p>Запрос:</p>
+                <p className="needspace">Статус:</p>
+                <p>Адрес получения:</p>
               </div>
-            <div className="Table-Rowname">
-              Запрос
+              <div className="History-Info">
+                <p>SR20022029787</p>
+                <p>Справка об обучении по месту пребывания</p>
+                <p className="Status-green">Готово</p>
+                <p>
+                  Отделение ЦРС на Большой Семеновской: <br />
+                  Ул. Большая Семеновская, 38;<br />
+                  Аудитории: В-101, В-102, В-107;<br />
+                  Телефон: 8-800-555-35-35
+                  </p>
               </div>
-            <div className="Table-Rowname">
-              Статус, дата
-              </div>
-            <div className="Table-Rowname">
-              Структурное подразделение, адрес
-              </div>
+            </div>
 
-            <div className="Table-Cell">
-              27.02.2019
+            <div className="HistoryCard">
+              <div className="History-Date">
+                01.03.2019
               </div>
-            <div className="Table-Cell">
-              SR20022029787
+              <div className="History-Titles">
+                <p>Рег. номер:</p>
+                <p>Запрос:</p>
+                <p className="needspaceMore">Статус:</p>
               </div>
-            <div className="Table-Cell">
-              Справка об обучении по месту пребывания
+              <div className="History-Info">
+                <p>SR20022029787</p>
+                <p>Справка о прослушанных дисциплинах за период обучения </p>
+                <p className="Status-red">Готовится</p>
               </div>
-            <div className="Table-Cell Cell_green">
-              Готово 27.03.2020
-              </div>
-            <div className="Table-Cell">
-              Отделение ЦРС на Большой Семеновской: <br />
-              Ул. Большая Семеновская, 38;<br />
-              Аудитории: В-101, В-102, В-107;<br />
-              Телефон: 8-800-555-35-35
-              </div>
+            </div>
+
           </div>
 
           <form>
@@ -196,4 +200,3 @@ export const Sertificates = (props) => {
     </div >
   );
 };
-

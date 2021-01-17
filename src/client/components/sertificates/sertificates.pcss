@@ -98,9 +98,10 @@
     font-weight: normal;
     font-size: 14px;
     line-height: 14px;
-    display: grid;
-    grid-template-columns: 1fr 1.5fr 1.5fr 1fr 2fr;
-    margin-bottom: 55px;
+    display: flex;
+    flex-flow: wrap;
+    justify-content: center;
+    margin-bottom: 45px;
   }
 }
 
@@ -108,27 +109,69 @@
   &-Isvisible_false {
     display: none;
   }
-  &-Rowname {
-    border: 1px solid #c4c4c4;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    text-align: center;
-    font-weight: bold;
+}
+
+.needspace {
+  margin-top: 27px;
+}
+
+.needspaceMore {
+  margin-top: 42px;
+}
+
+.HistoryCard {
+  border: 0.7px solid #C4C4C4;
+  border-radius: 5px;
+  display: grid;
+  grid-template-areas:
+    "a a"
+    "b c"
+    "b c"
+    "b c";
+  padding: 16px;
+  margin-left: 20px;
+  margin-right: 20px;
+  margin-bottom: 10px;
+  max-width: 280px;
+}
+
+.History {
+  &-Date {
+    grid-area: a;
+    font-family: HelveticaNeueCyr Medium, sans-serif;
+    font-weight: 550;
+    font-size: 16px;
+    line-height: 16px;
+    color: #2F2F2F;
+    text-align: left;
   }
-  &-Cell {
-    border: 1px solid #c4c4c4;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    text-align: center;
-    padding: 13.18px 22px;
+  &-Titles {
+    grid-area: b;
+    font-family: HelveticaNeueCyr Light, sans-serif;
+    font-weight: 300;
+    font-size: 14px;
+    line-height: 14px;
+    color: #000000;
+    text-align: right;
+  }
+  &-Info {
+    grid-area: c;
+    font-family: HelveticaNeueCyr Light, sans-serif;
+    font-weight: 300;
+    font-size: 14px;
+    line-height: 14px;
+    color: #000000;
+    text-align: left;
+    margin-left: 15px;
   }
 }
 
-.Cell {
-  &_green {
-    background: #c0e9d7;
+.Status {
+  &-green {
+    color: #479F79;
+  }
+  &-red {
+    color: #E03F3F;
   }
 }
 
@@ -257,11 +300,108 @@
     display: block;
   }
 
+  .Sertificates-Title {
+    font-size: 32px;
+    text-align: center;
+  }
+
   .Bg_yellow {
     border-radius: 0 5px 0 0;
   }
   .Cards-Rb {
     border-left: 15px solid #fff6a0;
     border-right: 0px;
+  }
+}
+
+@media screen and (max-width: 450px) {
+  .Sertificates-Content {
+    padding: 25px 0;
+  }
+
+  .Content {
+    &-Header {
+      width: 80%;
+      padding: 0 25px;
+    }
+    &-Description {
+      text-align: justify;
+      font-family: Raleway, sans-serif;
+      font-style: normal;
+      font-weight: 300;
+      font-size: 13px;
+      line-height: 15px;
+    }
+    &-Helpline {
+      margin: 25px 0;
+      text-align: center;
+    }
+  }
+
+  .Searchdoc-Inp {
+    font-size: 9px;
+  }
+
+  .Border {
+    &_yellow {
+      margin: 0;
+    }
+    &_lightgreen {
+      margin: 0;
+      border-right: 15px solid #c0e9d7;
+      border-radius: 0;
+    }
+    &_green {
+      margin: 0;
+      border-right: 15px solid #21aa93;
+      border-radius: 0;
+    }
+    &_lightblue {
+      margin: 0;
+      border-right: 15px solid #72a6eb;
+      border-radius: 0;
+    }
+    &_blue {
+      margin: 0;
+      border-right: 15px solid #2a66b6;
+      border-radius: 0;
+    }
+    &_violet {
+      margin: 0;
+      border-right: 15px solid #3533ac;
+      border-radius: 0;
+    }
+  }
+
+  .Bg {
+    &_yellow {
+      border-radius: 0;
+    }
+    &_lightgreen {
+      border-radius: 0;
+    }
+    &_green {
+      border-radius: 0;
+    }
+    &_lightblue {
+      border-radius: 0;
+    }
+    &_blue {
+      border-radius: 0;
+    }
+    &_violet {
+      border-radius: 0;
+    }
+  }
+
+  .Cards {
+    &-Rb {
+      border-right: 15px solid #fff6a0 !important;
+      border-left: 0px !important;
+    }
+    &-Lb {
+      border-left: 0px;
+      border-radius: 0;
+    }
   }
 }
