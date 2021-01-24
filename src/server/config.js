@@ -1,6 +1,6 @@
 const config = {
   database: 'mongodb://localhost/polyprofile',
-  port: 3000,
+  port: 3030,
   secret: 'itsasecret',
 };
 

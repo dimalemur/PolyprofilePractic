@@ -98,13 +98,10 @@ const Timetable = (props) => {
   let currentDayIndex = 0;
   const Navbar = props.Regnavbar;
   const token = window.localStorage.getItem('polyUser');
-
+  console.log(props.group);
   useEffect(() => {
-    if (props.group) {
-      props.asyncGetTimetable(token, props.group);
-    }
+    props.asyncGetTimetable(token, props.group);
   }, [props.group]);
-
   return (
     <div className='Timetable'>
       <Navbar />
@@ -113,7 +110,7 @@ const Timetable = (props) => {
           Расписание
         </h2>
         <p className='Timetable-Group'>
-          Группа: {props.group}
+          Группа: 181-362
         </p>
         <div className='Rasp Timetable-Content Timetable-Rasp'>
 
@@ -124,6 +121,7 @@ const Timetable = (props) => {
                 <div key={day} className='Rasp-Monday Rasp-Day Day'>
                   <div className='Day-Title'>
                     {days[day]}
+                    
                   </div>
                   {
                     Lessons(props.timeTable[day], day, false)

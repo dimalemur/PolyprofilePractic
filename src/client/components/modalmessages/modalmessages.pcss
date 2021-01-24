@@ -1,12 +1,17 @@
 .CreateDialog {
-  position: fixed;
+  display: none;
+  position: absolute;
   &-Content {
     border-radius: 5px;
     padding: 0;
     box-sizing: border-box;
     width: 338px;
     height: auto;
-    background: #FFFFFF;
+    background: #ffffff;
+  }
+
+  &_visible {
+    display: block;
   }
 }
 
@@ -24,10 +29,10 @@
 
 .CrD {
   &-Search {
-  width: 100%;
-  height: 100px;
-  background: #FFFFFF;
-  border-radius: 5px 5px 0px 0px;
+    width: 100%;
+    height: 100px;
+    background: #ffffff;
+    border-radius: 5px 5px 0px 0px;
   }
   &-BtnCreate {
     display: flex;
@@ -67,19 +72,21 @@
   font-size: 20px;
   line-height: 20px;
   color: #000000;
-  background: #FFFFFF;
+  background: #ffffff;
   border: 0.7px solid #898686;
   border-radius: 5px;
   padding-left: 5px;
   padding-right: 5px;
 }
 
-.inputField:active, .inputField:focus {
+.inputField:active,
+.inputField:focus {
   outline: 0;
   outline-offset: 0;
 }
 
 .newContact {
+  cursor: pointer;
   max-width: 338px;
   height: 66px;
   display: flex;
@@ -99,11 +106,22 @@
     margin-left: auto;
     width: 18px;
     height: 18px;
-    border: 1px solid #898686;
     border-radius: 40px;
+
     input[type="checkbox"] {
-      position: absolute;
-      opacity: 0;
+      border-radius: 100px;
+      box-sizing: border-box;
+      padding: 0;
+    }
+
+    input {
+      font-size: 1rem;
+      line-height: 1.5;
+      padding: 11px 23px;
+      border: 1px solid rgba(0, 0, 0, 0.15);
+      border-radius: 0;
+      outline: 0;
+      background-color: transparent;
     }
   }
 }

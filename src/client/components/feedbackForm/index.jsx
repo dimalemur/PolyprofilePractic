@@ -2,34 +2,37 @@ import React from 'react';
 import './feedbackform.pcss';
 
 export const FeedbackForm = (props) => (
-      <div className='FeedbackForm-Content'>
-        <div className='FbForm-Title'>
-          Для рассмотрения вашей проблемы, пожалуйста, заполните данные в форме, расположенной ниже
+  <div className='FeedbackForm-Content'>
+    <div className='FbForm-Title'>
+      Для рассмотрения вашей проблемы, пожалуйста, заполните данные в форме, расположенной ниже
         </div>
-        <div className='FbForm-Text'>
-          <span className='Text-Attention'>Обратите внимание</span>: на почтовые адреса Microsoft (@hotmail.com, @live.com, @live.ru, @msn.com, @passport.com, @outlook.com) ответ не придет по техническим причинам. Используйте почту на других доменах (@mail.ru, @yandex.ru, @gmail.com и т.д.)
+    <div className='FbForm-Text'>
+      <span className='Text-Attention'>Обратите внимание</span>: на почтовые адреса Microsoft (@hotmail.com, @live.com, @live.ru, @msn.com, @passport.com, @outlook.com) ответ не придет по техническим причинам. Используйте почту на других доменах (@mail.ru, @yandex.ru, @gmail.com и т.д.)
         </div>
-        <div className='FbForm-Form'>
-          <div className='Group-Labels'>
-            <p className='Fb-Label'>ФИО</p>
-            <p className='Fb-Label'>E-mail</p>
-            <p className='Fb-Label'>Телефон</p>
-            <p className='Fb-Label LabMarg'>Тематика обращения</p>
-          </div>
-          <div className='Group-Fields'>
-            <input className='Fb-Field' type='text' />
-            <input className='Fb-Field' type='text' />
-            <input className='Fb-Field' type='text' />
-            <input className='Fb-Field' type='text' />
-          </div>
-          <div className='Group-YourMes'>
-            <p className='Fb-LabYourMes'>Ваше сообщение</p>
-            <textarea className='Fb-TextYourMes'></textarea>
-          </div>
-        </div>
-        <div className='FbForm-Buttons'>
-          <button className='Btn-Send'>Отправить</button>
-          <button className='Btn-Back'>Вернуться на предыдущую страницу</button>
-        </div>
+    <div className='FbForm-Form'>
+      <div className='Group-Labels'>
+        <p className='Fb-Label'>ФИО</p>
+        <p className='Fb-Label'>E-mail</p>
+        <p className='Fb-Label'>Телефон</p>
+        <p className='Fb-Label LabMarg'>Тематика обращения</p>
       </div>
+      <div className='Group-Fields'>
+        <input className='Fb-Field' type='text' />
+        <input className='Fb-Field' type='text' />
+        <input className='Fb-Field' type='text' />
+        <input className='Fb-Field' type='text' />
+      </div>
+      <div className='Group-YourMes'>
+        <p className='Fb-LabYourMes'>Ваше сообщение</p>
+        <textarea className='Fb-TextYourMes'></textarea>
+      </div>
+    </div>
+    <div className='FbForm-Buttons'>
+      <button className='Btn-Send'>Отправить</button>
+      <button className='Btn-Back' onClick={(event) => {
+        event.preventDefault();
+        props.setFeedMod(1);
+      }}>Вернуться на предыдущую страницу</button>
+    </div>
+  </div>
 );

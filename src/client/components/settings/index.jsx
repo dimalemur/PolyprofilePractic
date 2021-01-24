@@ -150,7 +150,7 @@ const Settings = (props) => {
 
       <div className='Settings-Content'>
 
-        <div className='Settings-Title'>
+        <div className='Title Settings-Title'>
           Настройки
         </div>
 
